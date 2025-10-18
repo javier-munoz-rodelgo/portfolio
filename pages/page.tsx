@@ -9,8 +9,7 @@ export default function Home() {
       <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
         <h1>Hola, soy Javier 👋</h1>
         <p>
-          Frontend Developer especializado en diseño de componentes y desarrollo
-          UI.
+          Frontend Developer especializado en diseño de componentes y desarrollo UI.
         </p>
 
         <h2>📁 Mis proyectos</h2>

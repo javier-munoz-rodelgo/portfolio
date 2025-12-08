@@ -9,23 +9,29 @@ El objetivo es mostrar proyectos, experiencia y habilidades técnicas en un ento
 ## 🚀 Tecnologías utilizadas
 
 ### 🧩 [Next.js](https://nextjs.org/docs)
+
 Framework de React que ofrece **renderizado híbrido (SSR/SSG)**, **optimización automática de imágenes**, **routing basado en archivos** y **despliegue sencillo en Vercel**.  
 Usamos la **App Router** (`/app`) según la documentación oficial.
 
 ### ⚛️ [React](https://react.dev)
+
 Librería principal para construir interfaces interactivas y reutilizables. Toda la arquitectura de componentes se basa en React funcional con hooks.
 
 ### 🎨 [Tailwind CSS](https://tailwindcss.com/docs)
+
 Framework de CSS utilitario que permite crear diseños **responsivos y modernos** rápidamente.  
 Está integrado según la guía oficial de Next.js para [Tailwind](https://nextjs.org/docs/app/building-your-application/styling/tailwind-css).
 
 ### 🎞️ [Framer Motion](https://www.framer.com/motion/)
+
 Librería de animaciones para React, usada para crear transiciones suaves, efectos de entrada y animaciones al hacer scroll o hover.
 
 ### 🧠 [TypeScript](https://www.typescriptlang.org/docs/)
+
 Añade tipado estático a JavaScript, ayudando a prevenir errores y mejorar la mantenibilidad del código.
 
 ### 🖼️ [next/image](https://nextjs.org/docs/app/building-your-application/optimizing/images)
+
 Sistema de optimización de imágenes integrado en Next.js para mejorar el rendimiento y el SEO del portfolio.
 
 ---
@@ -55,7 +61,7 @@ Sistema de optimización de imágenes integrado en Next.js para mejorar el rendi
 ├─ next.config.js               → Configuración de Next.js
 ├─ tsconfig.json                → Configuración de TypeScript
 └─ package.json
-````
+```
 
 ## 🧱 Funcionalidades principales
 

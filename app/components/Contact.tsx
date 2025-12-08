@@ -20,7 +20,7 @@ export default function ContactPage() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 py-20"
+      className="min-h-dvh flex flex-col justify-center items-center px-6 md:px-12 py-20"
     >
       <div className="max-w-2xl w-full space-y-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center">Contacto</h1>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function HeroSection() {
+export default function Hero() {
   return (
     <section
       id="home"

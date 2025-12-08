@@ -1,5 +1,4 @@
 import "./../styles/globals.css";
-import Navbar from "./components/Navbar";
 
 export default function RootLayout({
   children,
@@ -9,7 +8,6 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="bg-white text-gray-900 antialiased">
-        <Navbar />
         {children}
         {/* Aquí tu Footer */}
       </body>

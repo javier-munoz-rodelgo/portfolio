@@ -7,6 +7,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
+    "format": "npx prettier --write .",
     "lint": "next lint"
   },
   "dependencies": {

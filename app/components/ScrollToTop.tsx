@@ -18,9 +18,9 @@ export default function ScrollToTop() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg"
+        className="fixed bottom-5 right-5 transition-colors duration-500 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg w-12 h-12 flex items-center justify-center cursor-pointer"
       >
-        ↑
+        <span className="material-symbols-rounded">north</span>
       </motion.button>
     )
   );

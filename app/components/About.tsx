@@ -6,7 +6,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="min-h-dvh flex flex-col justify-center items-center px-6 max-w-4xl mx-auto"
+      className="min-h-dvh flex flex-col justify-center items-center p-6 max-w-4xl mx-auto my-12"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}

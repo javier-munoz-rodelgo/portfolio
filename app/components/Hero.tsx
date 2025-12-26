@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-dvh flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-white to-gray-50"
+      className="min-h-dvh flex flex-col justify-center items-center text-center p-6 bg-gradient-to-b from-white to-gray-50"
     >
       {/* Animación de entrada del contenido */}
       <motion.div

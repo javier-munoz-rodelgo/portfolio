@@ -31,13 +31,13 @@ export default function Header() {
         </span>
 
         <div className="flex gap-6">
-          <Link href="#about" className="hover:text-blue-600">
+          <Link href="#about" className="hover:text-purple-600">
             About
           </Link>
-          <Link href="#projects" className="hover:text-blue-600">
+          <Link href="#projects" className="hover:text-purple-600">
             Projects
           </Link>
-          <Link href="#contact" className="hover:text-blue-600">
+          <Link href="#contact" className="hover:text-purple-600">
             Contact
           </Link>
         </div>

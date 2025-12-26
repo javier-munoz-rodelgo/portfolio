@@ -18,7 +18,7 @@ export default function Hero() {
       >
         {/* Nombre */}
         <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 leading-14">
-          Hola, soy <span className="text-blue-600">Javier Muñoz</span>
+          Hola, soy <span className="text-purple-600">Javier Muñoz</span>
         </h1>
 
         {/* Rol o especialidad */}
@@ -51,7 +51,7 @@ export default function Hero() {
         >
           <Link
             href="#projects"
-            className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors w-full md:w-auto"
+            className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors w-full md:w-auto"
           >
             Ver proyectos
           </Link>

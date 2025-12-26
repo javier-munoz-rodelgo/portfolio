@@ -51,14 +51,14 @@ export default function Hero() {
         >
           <Link
             href="#projects"
-            className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors w-full md:w-auto"
           >
             Ver proyectos
           </Link>
 
           <Link
             href="#contact"
-            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors"
+            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors w-full md:w-auto"
           >
             Contacto
           </Link>

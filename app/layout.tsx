@@ -1,9 +1,9 @@
 import "./../styles/globals.css";
-import { Inter } from "next/font/google";
+import { Inter as MaintFont } from "next/font/google";
 
-const inter = Inter({
+const mainFont = MaintFont({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--main-font",
 });
 
 export default function RootLayout({
@@ -19,7 +19,9 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
         />
       </head>
-      <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
+      <body
+        className={`${mainFont.className} bg-white text-gray-900 antialiased`}
+      >
         {children}
         {/* Aquí tu Footer */}
       </body>

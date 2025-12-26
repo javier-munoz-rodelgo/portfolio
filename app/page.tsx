@@ -12,9 +12,7 @@ export default function HomePage() {
     <main>
       <ScrollProgress />
       <Header />
-      <section id="home">
-        <Hero />
-      </section>
+      <Hero />
       <About />
       <Projects />
       <Contact />

@@ -17,7 +17,7 @@ export default function Hero() {
         className="max-w-3xl"
       >
         {/* Nombre */}
-        <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4">
+        <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 leading-14">
           Hola, soy <span className="text-blue-600">Javier Muñoz</span>
         </h1>
 

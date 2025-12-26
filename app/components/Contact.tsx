@@ -23,7 +23,7 @@ export default function ContactPage() {
       className="min-h-dvh flex flex-col justify-center items-center p-6 md:px-12 py-20"
     >
       <div className="max-w-2xl w-full space-y-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-center">Contacto</h1>
+        <h2 className="text-4xl font-bold text-center">Contacto</h2>
         <p className="text-center text-gray-600">
           Si quieres colaborar o tienes alguna propuesta, no dudes en
           escribirme.

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Caveat } from "next/font/google";
+import LanguageSelector from "./LanguageSelector";
 
 const caveat = Caveat({
   subsets: ["latin"],
@@ -30,16 +31,30 @@ export default function Header({ dict }: { dict: any }) {
           </Link>
         </span>
 
-        <div className="flex gap-6">
-          <Link href="#about" className="hover:text-purple-600">
+        <div className="flex items-center gap-2 sm:gap-6">
+          <Link
+            href="#about"
+            className="hover:text-purple-600 text-sm sm:text-base"
+          >
             {dict.about}
           </Link>
-          <Link href="#projects" className="hover:text-purple-600">
+          <Link
+            href="#projects"
+            className="hover:text-purple-600 text-sm sm:text-base"
+          >
             {dict.projects}
           </Link>
-          <Link href="#contact" className="hover:text-purple-600">
+          <Link
+            href="#contact"
+            className="hover:text-purple-600 text-sm sm:text-base"
+          >
             {dict.contact}
           </Link>
+
+          {/* Separador vertical */}
+          <div className="h-4 w-px bg-gray-300"></div>
+
+          <LanguageSelector />
         </div>
       </nav>
     </header>

@@ -11,10 +11,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "0.7.4",
     "clsx": "2.1.1",
     "framer-motion": "12.23.26",
     "lucide-react": "0.562.0",
     "motion": "12.23.26",
+    "negotiator": "1.0.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/postcss": "4.1.18",
+    "@types/negotiator": "0.6.4",
     "@types/node": "24.10.1",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",

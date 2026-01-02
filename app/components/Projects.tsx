@@ -1,11 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { projects } from "@/data/projects";
 import Image from "next/image";
 
-// TODO: Añadir proyectos.
-// TODO: Añadir todas las secciones nuevas de los proyectos como tags.
+// TODO: Añadir todos las secciones nuevas de los proyectos como tags.
 
 const container = {
   hidden: { opacity: 0 },
@@ -20,10 +18,12 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
-export default function Projects() {
+export default function Projects({ dict }: { dict: any }) {
+  const projects = dict.items || [];
+
   return (
     <section id="projects" className="py-32 p-6 max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-12">Proyectos</h2>
+      <h2 className="text-4xl font-bold text-center mb-12">{dict.title}</h2>
 
       <motion.div
         variants={container}
@@ -32,7 +32,7 @@ export default function Projects() {
         viewport={{ once: true }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
       >
-        {projects.map((p, i) => (
+        {projects.map((p: any, i: number) => (
           <motion.a
             href={p.link}
             target="_blank"

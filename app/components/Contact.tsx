@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export default function ContactPage() {
+export default function ContactPage({ dict }: { dict: any }) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const handleChange = (
@@ -23,15 +23,12 @@ export default function ContactPage() {
       className="min-h-dvh flex flex-col justify-center items-center p-6 md:px-12 py-20"
     >
       <div className="max-w-2xl w-full space-y-8">
-        <h2 className="text-4xl font-bold text-center">Contacto</h2>
-        <p className="text-center text-gray-600">
-          Si quieres colaborar o tienes alguna propuesta, no dudes en
-          escribirme.
-        </p>
+        <h2 className="text-4xl font-bold text-center">{dict.title}</h2>
+        <p className="text-center text-gray-600">{dict.description}</p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-gray-700 mb-2" htmlFor="name">
-              Nombre
+              {dict.name || "Name"}
             </label>
             <input
               id="name"
@@ -44,7 +41,7 @@ export default function ContactPage() {
           </div>
           <div>
             <label className="block text-gray-700 mb-2" htmlFor="email">
-              Correo electrónico
+              {dict.email || "Email"}
             </label>
             <input
               id="email"
@@ -58,7 +55,7 @@ export default function ContactPage() {
           </div>
           <div>
             <label className="block text-gray-700 mb-2" htmlFor="message">
-              Mensaje
+              {dict.message || "Message"}
             </label>
             <textarea
               id="message"
@@ -74,7 +71,7 @@ export default function ContactPage() {
             type="submit"
             className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors w-full"
           >
-            Enviar mensaje
+            {dict.send}
           </button>
         </form>
       </div>

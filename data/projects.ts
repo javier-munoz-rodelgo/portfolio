@@ -1,11 +1,19 @@
 /**
  * Modelo para definir los proyectos
  */
+/**
+ * Modelo que define la estructura de un proyecto.
+ */
 export interface Project {
+  /** Título del proyecto */
   title: string;
+  /** Descripción de lo que hace el proyecto */
   description: string;
+  /** Lista de tecnologías o categorías */
   tags: string[];
+  /** URL a la imagen del proyecto (ruta relativa) */
   image: string;
+  /** URL al proyecto en vivo o repositorio */
   link: string;
 }
 

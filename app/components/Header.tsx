@@ -9,7 +9,7 @@ const caveat = Caveat({
   variable: "--font-caveat",
 });
 
-export default function Header() {
+export default function Header({ dict }: { dict: any }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -32,13 +32,13 @@ export default function Header() {
 
         <div className="flex gap-6">
           <Link href="#about" className="hover:text-purple-600">
-            About
+            {dict.about}
           </Link>
           <Link href="#projects" className="hover:text-purple-600">
-            Projects
+            {dict.projects}
           </Link>
           <Link href="#contact" className="hover:text-purple-600">
-            Contact
+            {dict.contact}
           </Link>
         </div>
       </nav>

@@ -1,0 +1,73 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Front-end Manager & UI Developer",
+    "description": "Apasionado por construir interfaces limpias, rápidas y usables. Me gusta unir diseño y código para crear experiencias web que destaquen.",
+    "viewProjects": "Ver proyectos",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "p1": "Front-end Manager especializado en UI/UX con más de 5 años de experiencia en desarrollo web, diseño de sistemas de componentes y liderazgo técnico. Desde 2023 lidero el equipo frontend en <span class='font-bold'>ATM Grupo Maggioli</span>, donde dirijo la creación y evolución de <span class='font-bold'>IRIS</span>, un <span class='font-bold'>Design System corporativo</span> basado en <span class='font-bold underline decoration-sky-500'>Web Componentes con StencilJS</span> que unifica la identidad visual de la compañía tras la fusión de tres empresas.",
+    "p2": "IRIS se construye en un <span class='font-bold'>monorepo gestionado con Lerna</span>, está publicado en <span class='font-bold'>NPM</span> como librería interna y ofrece un catálogo completo de componentes, desde piezas fundamentales (botones, iconos, alertas) hasta soluciones complejas de interfaz como <span class='font-bold'>dashboards, formularios dinámicos o gestores de traducciones</span>. Su arquitectura está centrada en la <span class='font-bold'>escalabilidad, accesibilidad, rendimiento y modularidad</span>, convirtiéndose en el estándar transversal para nuevos productos.",
+    "p3": "Además, aporto soporte estratégico a otros proyectos como <span class='font-bold'>Scrum Master</span>, impulsando buenas prácticas en <span class='font-bold'>CI/CD, automatización, gestión con Jira y metodologías ágiles</span>, orientadas a la entrega continua y la mejora del flujo de trabajo entre equipos.",
+    "p4": "Experiencia previa en desarrollo full-stack con <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP y SQL</span>, lo que me permite tener una visión completa del ciclo de producto y comunicarme eficazmente con perfiles multidisciplinares."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": [
+      {
+        "title": "IRIS",
+        "description": "IRIS Web Componentes es una arquitectura moderna basada en un monorepo gestionado con Lerna, que centraliza todos los componentes visuales del ecosistema IRIS en paquetes independientes, reutilizables y escalables, desarrollados con Stencil.",
+        "tags": ["Profesional"],
+        "image": "/projects/iris.svg",
+        "link": "https://iris.atm-maggioli.es/"
+      },
+      {
+        "title": "Apps móviles",
+        "description": "Soluciones para la gestión de expedientes, pagos y consultas en la nube.",
+        "tags": ["Profesional"],
+        "image": "/projects/atm.png",
+        "link": "https://play.google.com/store/apps/dev?id=8222897177929282618&hl=es_419"
+      },
+      {
+        "title": "Sede electrónica",
+        "description": "Plataforma para el ciudadano donde consultar el estado de sus Expedientes, Pagar tasas y recibos de impuestos (Oficina Virtual Tributaria), realizar gestiones relacionadas con el Padrón Municipal de Habitantes, Seguimiento del Perfil del Contratante, Registros automáticos etc.",
+        "tags": ["Profesional"],
+        "image": "/projects/atm.png",
+        "link": "https://www.atm-maggioli.es/software-y-consultoria/administracion-electronica/"
+      },
+      {
+        "title": "Gestión Integral de Tributos",
+        "description": "Plataforma de Software en la nube para la gestión tributaria, recaudación voluntaria y ejecutiva, inspección y multas..",
+        "tags": ["Profesional"],
+        "image": "/projects/atm.png",
+        "link": "https://www.atm-maggioli.es/software-y-consultoria/gestion-tributaria-y-recaudacion/"
+      },
+      {
+        "title": "Vithas Hospitales",
+        "description": "Cuadro médico, gestión de citas y portal del paciente.",
+        "tags": ["Profesional"],
+        "image": "/projects/vithas.svg",
+        "link": "https://vithas.es/"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Si quieres colaborar o tienes alguna propuesta, no dudes en escribirme.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar mensaje"
+  },
+  "footer": {
+    "rights": "Portfolio"
+  }
+}

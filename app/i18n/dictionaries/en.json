@@ -1,0 +1,73 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Front-end Manager & UI Developer",
+    "description": "Passionate about building clean, fast, and usable interfaces. I love combining design and code to create web experiences that stand out.",
+    "viewProjects": "View projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Front-end Manager specialized in UI/UX with over 5 years of experience in web development, component system design, and technical leadership. Since 2023 I lead the frontend team at <span class='font-bold'>ATM Grupo Maggioli</span>, where I direct the creation and evolution of <span class='font-bold'>IRIS</span>, a <span class='font-bold'>corporate Design System</span> based on <span class='font-bold underline decoration-sky-500'>Web Components with StencilJS</span> that unifies the company's visual identity after the merger of three companies.",
+    "p2": "IRIS is built on a <span class='font-bold'>monorepo managed with Lerna</span>, published on <span class='font-bold'>NPM</span> as an internal library, and offers a complete catalog of components, from fundamental pieces (buttons, icons, alerts) to complex interface solutions like <span class='font-bold'>dashboards, dynamic forms, or translation managers</span>. Its architecture focuses on <span class='font-bold'>scalability, accessibility, performance, and modularity</span>, becoming the transversal standard for new products.",
+    "p3": "Additionally, I provide strategic support to other projects as a <span class='font-bold'>Scrum Master</span>, promoting best practices in <span class='font-bold'>CI/CD, automation, Jira management, and agile methodologies</span>, oriented towards continuous delivery and workflow improvement between teams.",
+    "p4": "Previous full-stack development experience with <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP, and SQL</span>, allowing me to have a complete vision of the product cycle and communicate effectively with multidisciplinary profiles."
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "IRIS",
+        "description": "IRIS Web Components is a modern architecture based on a monorepo managed with Lerna, centralizing all visual components of the IRIS ecosystem into independent, reusable, and scalable packages, developed with Stencil.",
+        "tags": ["Professional"],
+        "image": "/projects/iris.svg",
+        "link": "https://iris.atm-maggioli.es/"
+      },
+      {
+        "title": "Mobile Apps",
+        "description": "Solutions for file management, payments, and cloud inquiries.",
+        "tags": ["Professional"],
+        "image": "/projects/atm.png",
+        "link": "https://play.google.com/store/apps/dev?id=8222897177929282618&hl=en"
+      },
+      {
+        "title": "Electronic Headquarters",
+        "description": "Citizen platform to consult file status, pay fees and taxes (Virtual Tax Office), manage Municipal Register tasks, Contractor Profile tracking, automatic registrations, etc.",
+        "tags": ["Professional"],
+        "image": "/projects/atm.png",
+        "link": "https://www.atm-maggioli.es/software-y-consultoria/administracion-electronica/"
+      },
+      {
+        "title": "Integral Tax Management",
+        "description": "Cloud software platform for tax management, voluntary and executive collection, inspection, and fines.",
+        "tags": ["Professional"],
+        "image": "/projects/atm.png",
+        "link": "https://www.atm-maggioli.es/software-y-consultoria/gestion-tributaria-y-recaudacion/"
+      },
+      {
+        "title": "Vithas Hospitals",
+        "description": "Medical directory, appointment management, and patient portal.",
+        "tags": ["Professional"],
+        "image": "/projects/vithas.svg",
+        "link": "https://vithas.es/"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "If you want to collaborate or have a proposal, feel free to write to me.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message"
+  },
+  "footer": {
+    "rights": "Portfolio"
+  }
+}

@@ -1,6 +1,9 @@
 import "../../styles/globals.css";
 import { Inter as MaintFont } from "next/font/google";
 
+import { Metadata } from "next";
+import { getDictionary, Locale } from "../i18n/get-dictionary";
+
 const mainFont = MaintFont({
   subsets: ["latin"],
   variable: "--main-font",
@@ -14,6 +17,78 @@ const mainFont = MaintFont({
  */
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "es" }];
+}
+
+/**
+ * Genera la metainformación dinámica para la página basada en el idioma.
+ *
+ * @param props.params - Los parámetros de la ruta que contienen el idioma.
+ */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
+  return {
+    // Título de la página.
+    title: dict.meta.title,
+    // Descripción para SEO.
+    description: dict.meta.description,
+    // Palabras clave para motores de búsqueda.
+    keywords: dict.meta.keywords,
+    // URL base para resolver rutas relativas en metadatos.
+    metadataBase: new URL("https://javiermunoz.dev"),
+    // Autores del contenido.
+    authors: [{ name: "Javier Muñoz Rodelgo", url: "https://javiermunoz.dev" }],
+    // Creador del sitio.
+    creator: "Javier Muñoz Rodelgo",
+    // Configuración para compartir en redes sociales (Open Graph)
+    openGraph: {
+      title: dict.meta.title,
+      description: dict.meta.description,
+      type: "website",
+      locale: lang,
+      // URL canónica para este idioma
+      url: `https://javiermunoz.dev/${lang}`,
+      siteName: "Javier Muñoz Portfolio",
+      images: [
+        {
+          url: "/avatar.png",
+          width: 200,
+          height: 200,
+          alt: "Javier Muñoz Portfolio",
+        },
+      ],
+    },
+    // Configuración específica para tarjetas de Twitter
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.title,
+      description: dict.meta.description,
+    },
+    // Enlaces alternativos para SEO internacional
+    alternates: {
+      // URL canónica de esta página
+      canonical: `https://javiermunoz.dev/${lang}`,
+      // URLs alternativas para otros idiomas
+      languages: {
+        en: `https://javiermunoz.dev/en`,
+        es: `https://javiermunoz.dev/es`,
+      },
+    },
+    // Instrucciones para robots de búsqueda
+    robots: {
+      index: true, // Permitir indexación
+      follow: true, // Permitir seguir enlaces
+      googleBot: {
+        index: true,
+        follow: true,
+      },
+    },
+  };
 }
 
 /**

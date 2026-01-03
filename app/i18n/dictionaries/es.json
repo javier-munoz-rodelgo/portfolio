@@ -5,6 +5,11 @@
     "projects": "Proyectos",
     "contact": "Contacto"
   },
+  "meta": {
+    "title": "Javier | Portfolio",
+    "description": "Portfolio de Javier, Front-end Manager y UI Developer especializado en construir aplicaciones web accesibles, escalables y de alto rendimiento.",
+    "keywords": "Front-end, Desarrollo Web, UI/UX, React, Next.js, StencilJS, Design Systems"
+  },
   "hero": {
     "greeting": "Hola, soy",
     "role": "Front-end Manager & UI Developer",

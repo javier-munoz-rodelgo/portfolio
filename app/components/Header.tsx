@@ -31,7 +31,7 @@ export default function Header({ dict }: { dict: any }) {
           </Link>
         </span>
 
-        <div className="flex items-center gap-2 sm:gap-6">
+        <div className="flex items-center gap-4 sm:gap-6">
           <Link
             href="#about"
             className="hover:text-purple-600 text-sm sm:text-base"

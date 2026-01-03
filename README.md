@@ -80,4 +80,12 @@ Sistema de optimización de imágenes integrado en Next.js para mejorar el rendi
 - Integrar CMS (Sanity / Contentful / Notion API)
 - Añadir sección de blog con MDX
 - Incorporar efectos de scroll (parallax / reveal)
-- Internacionalización (i18n)
+- Internacionalización (i18n) ✅
+
+## 🌍 Internacionalización
+
+El proyecto cuenta con soporte completo para inglés y español.
+
+- **Detección Automática**: Redirección según las preferencias del navegador.
+- **Selector de Idioma**: Componente manual para cambio de idioma.
+- **Documentación Completa**: Consulta los detalles de implementación en [docs/internationalization.md](docs/internationalization.md).

@@ -1,21 +1,40 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useActionState, useEffect } from "react";
+import { toast } from "sonner";
+import Form from "next/form";
+import { sendContactEmail, ContactFormState } from "@/app/actions/contact";
 
+// TODO: Añadir asterisco para los campos requeridos del formulario.
+
+/**
+ * Componente principal de la página de contacto.
+ * Renderiza el formulario usando componentes nativos de Next.js.
+ *
+ * @param dict - Diccionario de traducciones para internacionalización.
+ */
 export default function ContactPage({ dict }: { dict: any }) {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const initialState: ContactFormState = { success: false, error: "" };
+  const [state, formAction, isPending] = useActionState(
+    sendContactEmail,
+    initialState
+  );
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Mensaje enviado. ¡Gracias por contactarme!");
-    setForm({ name: "", email: "", message: "" });
-  };
+  // Efecto para mostrar notificaciones basadas en el estado del server action
+  useEffect(() => {
+    if (state?.error) {
+      toast.error(state.error);
+    }
+    if (state?.success) {
+      toast.success("Mensaje enviado correctamente. ¡Gracias!");
+      // Opcional: Resetear el formulario manualmente si es necesario,
+      // aunque con useActionState y nativos se limpia al recargar o se puede usar ref.
+      // Aquí simplemente confiamos en el feedback positivo.
+      // Si quisiéramos limpiar los campos, necesitaríamos un ref al formulario.
+      const formElement = document.querySelector("form") as HTMLFormElement;
+      if (formElement) formElement.reset();
+    }
+  }, [state]);
 
   return (
     <section
@@ -25,7 +44,8 @@ export default function ContactPage({ dict }: { dict: any }) {
       <div className="max-w-2xl w-full space-y-8">
         <h2 className="text-4xl font-bold text-center">{dict.title}</h2>
         <p className="text-center text-gray-600">{dict.description}</p>
-        <form onSubmit={handleSubmit} className="space-y-6">
+
+        <Form action={formAction} className="space-y-6">
           <div>
             <label className="block text-gray-700 mb-2" htmlFor="name">
               {dict.name || "Name"}
@@ -33,10 +53,9 @@ export default function ContactPage({ dict }: { dict: any }) {
             <input
               id="name"
               name="name"
-              value={form.name}
-              onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              disabled={isPending}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
             />
           </div>
           <div>
@@ -47,10 +66,9 @@ export default function ContactPage({ dict }: { dict: any }) {
               id="email"
               name="email"
               type="email"
-              value={form.email}
-              onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              disabled={isPending}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
             />
           </div>
           <div>
@@ -61,19 +79,19 @@ export default function ContactPage({ dict }: { dict: any }) {
               id="message"
               name="message"
               rows={5}
-              value={form.message}
-              onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              disabled={isPending}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
             />
           </div>
           <button
             type="submit"
-            className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors w-full"
+            disabled={isPending}
+            className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors w-full cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {dict.send}
+            {isPending ? "Enviando..." : dict.send}
           </button>
-        </form>
+        </Form>
       </div>
     </section>
   );

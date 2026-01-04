@@ -1,5 +1,6 @@
 import "../../styles/globals.css";
 import { Inter as MaintFont } from "next/font/google";
+import { Toaster } from "sonner";
 
 import { Metadata } from "next";
 import { getDictionary, Locale } from "../i18n/get-dictionary";
@@ -118,6 +119,7 @@ export default async function RootLayout({
         className={`${mainFont.className} bg-white text-gray-900 antialiased`}
       >
         {children}
+        <Toaster position="top-center" richColors />
         {/* Aquí tu Footer */}
       </body>
     </html>

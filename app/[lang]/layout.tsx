@@ -1,6 +1,7 @@
 import "../../styles/globals.css";
 import { Inter as MaintFont } from "next/font/google";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Metadata } from "next";
 import { getDictionary, Locale } from "../i18n/get-dictionary";
@@ -120,7 +121,7 @@ export default async function RootLayout({
       >
         {children}
         <Toaster position="top-center" richColors />
-        {/* Aquí tu Footer */}
+        <Analytics />
       </body>
     </html>
   );

@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SOCIALS } from "../data/socials";
+
 export default function Hero({ dict }: { dict: any }) {
   return (
     <section
@@ -40,6 +43,25 @@ export default function Hero({ dict }: { dict: any }) {
         >
           {dict.description}
         </motion.p>
+
+        {/* Social Links */}
+        <div className="flex items-center justify-center gap-6 mb-8">
+          {SOCIALS.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-purple-600 hover:scale-110 transition-all duration-300 transform"
+              aria-label={social.name}
+            >
+              <FontAwesomeIcon
+                icon={social.icon}
+                style={{ fontSize: "28px" }}
+              />
+            </a>
+          ))}
+        </div>
 
         {/* CTA principal */}
         <motion.div

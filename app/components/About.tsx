@@ -29,7 +29,7 @@ export default function About({ dict }: { dict: any }) {
         />
 
         <div className=" text-gray-600 text-lg leading-relaxed">
-          <h2 className="text-4xl font-bold mb-6 text-center hidden md:block">
+          <h2 className="text-4xl font-bold mb-6 hidden md:block">
             {dict.title}
           </h2>
 

@@ -24,6 +24,55 @@
     "p3": "Additionally, I provide strategic support to other projects as a <span class='font-bold'>Scrum Master</span>, promoting best practices in <span class='font-bold'>CI/CD, automation, Jira management, and agile methodologies</span>, oriented towards continuous delivery and workflow improvement between teams.",
     "p4": "Previous full-stack development experience with <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP, and SQL</span>, allowing me to have a complete vision of the product cycle and communicate effectively with multidisciplinary profiles."
   },
+
+  "technologies": {
+    "title": "Technologies",
+    "p1": "Throughout my experience, I have worked with various technologies, applying them in personal and professional projects. Some of them are:",
+    "technologies": [
+      {
+        "title": "Front-end",
+        "items": [
+          { "text": "HTML5", "logo": "/logos/html5.svg" },
+          { "text": "CSS3", "logo": "/logos/css3.svg" },
+          { "text": "JavaScript", "logo": "/logos/js.svg" },
+          { "text": "React", "logo": "/logos/react.svg" },
+          { "text": "Next.js", "logo": "/logos/nextjs.svg" },
+          { "text": "Angular", "logo": "/logos/angular.png" },
+          { "text": "StencilJS", "logo": "/logos/stenciljs.png" }
+        ]
+      },
+      {
+        "title": "Back-end",
+        "items": [
+          { "text": "Node.js", "logo": "/logos/nodejs.png" },
+          { "text": "C#", "logo": "/logos/csharp.svg" },
+          { "text": "Java", "logo": "/logos/java.png" },
+          { "text": "Swift", "logo": "/logos/swift.png" },
+          { "text": "SQL", "logo": "/logos/sql.webp" }
+        ]
+      },
+      {
+        "title": "Herramientas",
+        "items": [
+          { "text": "Git", "logo": "/logos/git.svg" },
+          { "text": "GitHub", "logo": "/logos/github.svg" },
+          { "text": "Bitbucket", "logo": "/logos/bitbucket.svg" },
+          { "text": "Trello", "logo": "/logos/trello.png" },
+          { "text": "Jira", "logo": "/logos/jira.png" },
+          { "text": "Eclipse", "logo": "/logos/eclipse.webp" },
+          { "text": "Antigravity", "logo": "/logos/antigravity.png" }
+        ]
+      },
+      {
+        "title": "Aprendiendo",
+        "items": [
+          { "text": "Tailwind CSS", "logo": "/logos/tailwindcss.svg" },
+          { "text": "Vue.js", "logo": "/logos/vue.svg" },
+          { "text": "Sentry", "logo": "/logos/sentry.webp" }
+        ]
+      }
+    ]
+  },
   "projects": {
     "title": "Projects",
     "items": [

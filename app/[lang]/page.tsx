@@ -1,6 +1,7 @@
 import Header from "@/app/components/Header";
 import Hero from "@/app/components/Hero";
 import About from "@/app/components/About";
+import Technologies from "@/app/components/Technologies";
 import Projects from "@/app/components/Projects";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
@@ -28,6 +29,7 @@ export default async function HomePage({
       <Header dict={dict.navigation} />
       <Hero dict={dict.hero} />
       <About dict={dict.about} />
+      <Technologies dict={dict.technologies} />
       <Projects dict={dict.projects} />
       <Contact dict={dict.contact} />
       <Footer dict={dict.footer} />

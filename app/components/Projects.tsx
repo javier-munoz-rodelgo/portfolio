@@ -22,7 +22,7 @@ export default function Projects({ dict }: { dict: any }) {
   const projects = dict.items || [];
 
   return (
-    <section id="projects" className="py-32 p-6 max-w-6xl mx-auto">
+    <section id="projects" className="my-12 p-6 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-12">{dict.title}</h2>
 
       <motion.div

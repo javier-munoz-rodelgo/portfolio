@@ -42,9 +42,7 @@ export default function ContactPage({ dict }: { dict: any }) {
       className="min-h-dvh flex flex-col justify-center items-center p-6 my-12"
     >
       <div className="max-w-2xl w-full space-y-8">
-        <h2 className="text-5xl font-caveat font-bold text-center">
-          {dict.title}
-        </h2>
+        <h2 className="text-4xl font-bold text-center">{dict.title}</h2>
         <p className="text-center text-gray-600">{dict.description}</p>
 
         <Form action={formAction} className="space-y-6">

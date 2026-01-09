@@ -2,13 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Caveat } from "next/font/google";
 import LanguageSelector from "./LanguageSelector";
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
-});
 
 export default function Header({ dict }: { dict: any }) {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +20,7 @@ export default function Header({ dict }: { dict: any }) {
     >
       <nav className="max-w-6xl mx-auto flex justify-between items-center px-6">
         <span className="font-semibold text-xl">
-          <Link href="#home" className={`${caveat.className}`} title="Go Home">
+          <Link href="#home" className="font-caveat" title="Go Home">
             JM
           </Link>
         </span>

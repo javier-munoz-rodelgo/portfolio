@@ -14,7 +14,7 @@ export default function About({ dict }: { dict: any }) {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-4xl font-bold mb-6 text-center md:hidden">
+      <h2 className="text-5xl font-caveat font-bold mb-6 text-center md:hidden">
         {dict.title}
       </h2>
 
@@ -29,7 +29,7 @@ export default function About({ dict }: { dict: any }) {
         />
 
         <div className=" text-gray-600 text-lg leading-relaxed">
-          <h2 className="text-4xl font-bold mb-6 hidden md:block">
+          <h2 className="text-5xl font-caveat font-bold mb-6 hidden md:block">
             {dict.title}
           </h2>
 

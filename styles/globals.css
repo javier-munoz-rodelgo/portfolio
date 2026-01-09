@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "flag-icons/css/flag-icons.min.css";
 
+@theme {
+  --font-sans: var(--font-sans);
+  --font-caveat: var(--font-caveat), cursive;
+}
+
 html {
   scroll-behavior: smooth;
 }

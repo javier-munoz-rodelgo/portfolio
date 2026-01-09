@@ -21,7 +21,8 @@ export default function Hero({ dict }: { dict: any }) {
       >
         {/* Nombre */}
         <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 leading-14">
-          {dict.greeting} <span className="text-purple-600">Javier Muñoz</span>
+          {dict.greeting}{" "}
+          <span className="text-purple-600 font-caveat">Javier Muñoz</span>
         </h1>
 
         {/* Rol o especialidad */}

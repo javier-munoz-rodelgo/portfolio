@@ -18,7 +18,7 @@ export default function Technologies({ dict }: { dict: any }) {
       className="min-h-dvh flex flex-col justify-center items-center bg-gray-50"
     >
       <div className="max-w-6xl mx-auto p-6 my-12 ">
-        <h2 className="text-4xl font-bold mb-6 text-center md:text-left">
+        <h2 className="text-5xl font-caveat font-bold mb-6 text-center md:text-left">
           {dict.title}
         </h2>
 

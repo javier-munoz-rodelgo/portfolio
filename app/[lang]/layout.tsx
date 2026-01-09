@@ -1,5 +1,5 @@
 import "../../styles/globals.css";
-import { Inter as MaintFont } from "next/font/google";
+import { Inter as MaintFont, Caveat } from "next/font/google";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -8,7 +8,14 @@ import { getDictionary, Locale } from "../i18n/get-dictionary";
 
 const mainFont = MaintFont({
   subsets: ["latin"],
-  variable: "--main-font",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+  display: "swap",
 });
 
 /**
@@ -117,7 +124,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${mainFont.className} bg-white text-gray-900 antialiased`}
+        className={`${mainFont.variable} ${caveat.variable} font-sans bg-white text-gray-900 antialiased`}
       >
         {children}
         <Toaster position="top-center" richColors />

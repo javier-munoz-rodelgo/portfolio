@@ -23,7 +23,9 @@ export default function Projects({ dict }: { dict: any }) {
 
   return (
     <section id="projects" className="my-12 p-6 max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-12">{dict.title}</h2>
+      <h2 className="text-5xl font-caveat font-bold text-center mb-12">
+        {dict.title}
+      </h2>
 
       <motion.div
         variants={container}

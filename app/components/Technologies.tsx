@@ -24,9 +24,9 @@ export default function Technologies({ dict }: { dict: any }) {
 
         <p className="mb-6" dangerouslySetInnerHTML={{ __html: dict.p1 }}></p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
           {dict.technologies.map((tecnology: Tecnology, index: number) => (
-            <div className="" key={index}>
+            <div className="p-6 rounded-xl bg-white shadow-md" key={index}>
               <h3 className="text-2xl font-bold mb-6 text-gray-600">
                 {tecnology.title}
               </h3>

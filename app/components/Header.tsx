@@ -4,7 +4,15 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import LanguageSelector from "./LanguageSelector";
 
-export default function Header({ dict }: { dict: any }) {
+export default function Header({
+  dict,
+  page = "other",
+  lang = "es",
+}: {
+  dict: any;
+  page?: "home" | "other";
+  lang?: string;
+}) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -20,36 +28,46 @@ export default function Header({ dict }: { dict: any }) {
     >
       <nav className="max-w-6xl mx-auto flex justify-between items-center px-6">
         <span className="font-semibold text-xl">
-          <Link href="#home" className="font-caveat" title="Go Home">
+          <Link
+            href={page === "home" ? "#home" : `/${lang}`}
+            className="font-caveat"
+            title="Go Home"
+          >
             JM
           </Link>
         </span>
 
-        <div className="flex items-center gap-4 sm:gap-6">
-          <Link
-            href="#about"
-            className="hover:text-purple-600 text-sm sm:text-base"
-          >
-            {dict.about}
-          </Link>
-          <Link
-            href="#projects"
-            className="hover:text-purple-600 text-sm sm:text-base"
-          >
-            {dict.projects}
-          </Link>
-          <Link
-            href="#contact"
-            className="hover:text-purple-600 text-sm sm:text-base"
-          >
-            {dict.contact}
-          </Link>
+        {page === "home" ? (
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Link
+              href="#about"
+              className="hover:text-purple-600 text-sm sm:text-base"
+            >
+              {dict.about}
+            </Link>
+            <Link
+              href="#projects"
+              className="hover:text-purple-600 text-sm sm:text-base"
+            >
+              {dict.projects}
+            </Link>
+            <Link
+              href="#contact"
+              className="hover:text-purple-600 text-sm sm:text-base"
+            >
+              {dict.contact}
+            </Link>
 
-          {/* Separador vertical */}
-          <div className="h-4 w-px bg-gray-300"></div>
+            {/* Separador vertical */}
+            <div className="h-4 w-px bg-gray-300"></div>
 
-          <LanguageSelector />
-        </div>
+            <LanguageSelector />
+          </div>
+        ) : (
+          <div className="flex items-center gap-4 sm:gap-6">
+            <LanguageSelector />
+          </div>
+        )}
       </nav>
     </header>
   );

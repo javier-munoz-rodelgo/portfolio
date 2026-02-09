@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { SOCIALS } from "../data/socials";
 
 export default function Hero({ dict }: { dict: any }) {

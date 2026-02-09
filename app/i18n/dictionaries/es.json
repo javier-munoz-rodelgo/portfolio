@@ -22,7 +22,113 @@
     "p1": "Front-end Manager especializado en UI/UX con más de 5 años de experiencia en desarrollo web, diseño de sistemas de componentes y liderazgo técnico. Desde 2023 lidero el equipo frontend en <span class='font-bold'>ATM Grupo Maggioli</span>, donde dirijo la creación y evolución de <span class='font-bold'>IRIS</span>, un <span class='font-bold'>Design System corporativo</span> basado en <span class='font-bold underline decoration-sky-500'>Web Componentes con StencilJS</span> que unifica la identidad visual de la compañía tras la fusión de tres empresas.",
     "p2": "IRIS se construye en un <span class='font-bold'>monorepo gestionado con Lerna</span>, está publicado en <span class='font-bold'>NPM</span> como librería interna y ofrece un catálogo completo de componentes, desde piezas fundamentales (botones, iconos, alertas) hasta soluciones complejas de interfaz como <span class='font-bold'>dashboards, formularios dinámicos o gestores de traducciones</span>. Su arquitectura está centrada en la <span class='font-bold'>escalabilidad, accesibilidad, rendimiento y modularidad</span>, convirtiéndose en el estándar transversal para nuevos productos.",
     "p3": "Además, aporto soporte estratégico a otros proyectos como <span class='font-bold'>Scrum Master</span>, impulsando buenas prácticas en <span class='font-bold'>CI/CD, automatización, gestión con Jira y metodologías ágiles</span>, orientadas a la entrega continua y la mejora del flujo de trabajo entre equipos.",
-    "p4": "Experiencia previa en desarrollo full-stack con <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP y SQL</span>, lo que me permite tener una visión completa del ciclo de producto y comunicarme eficazmente con perfiles multidisciplinares."
+    "p4": "Experiencia previa en desarrollo full-stack con <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP y SQL</span>, lo que me permite tener una visión completa del ciclo de producto y comunicarme eficazmente con perfiles multidisciplinares.",
+    "readMore": "Saber más"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "present": "Presente",
+    "items": [
+      {
+        "name": "ATM Grupo Maggioli",
+        "image": "/projects/atm.png",
+        "experiences": [
+          {
+            "title": "Front-end Manager | UI/UX Solutions Expert",
+            "startDate": "2021-01-01",
+            "endDate": null,
+            "description": [
+              "Lidero un equipo de desarrolladores frontend en la creación e integración de interfaces web modernas, responsivas y accesibles, asegurando estándares de calidad y usabilidad.",
+              "Diseño y desarrollo de soluciones UI escalables utilizando tecnologías como HTML5, JavaScript, TypeScript, SASS y frameworks modernos como Angular y StencilJS, con especial atención a la modularidad y la reutilización de componentes.",
+              "Implementación de componentes Web Components con StencilJS, integrados eficientemente en aplicaciones multiplataforma.",
+              "Coordinación estrecha con equipos UX/UI y stakeholders, utilizando herramientas como Figma y Adobe XD, para transformar prototipos en experiencias digitales intuitivas y consistentes.",
+              "Fomento e implementación de metodologías ágiles (Scrum/Kanban), con enfoque en la entrega continua, mejora de procesos y colaboración transversal entre equipos.",
+              "Participación activa en la planificación estratégica del producto, priorización de tareas y toma de decisiones técnicas clave orientadas a la escalabilidad y eficiencia.",
+              "Enfoque constante en la mejora de la experiencia del usuario final, aplicando principios de accesibilidad, diseño centrado en el usuario y pruebas de usabilidad."
+            ]
+          },
+          {
+            "title": "Front-end & Back-end Developer",
+            "startDate": "2020-05-01",
+            "endDate": "2021-01-01",
+            "description": [
+              "Maquetación e integración de páginas web. HTML5, JavaScript, jQuery, CSS3, SASS.",
+              "Desarrollo de Apps móviles para Android e iOS.",
+              "Desarrollo y mantenimiento de aplicaciones dinámicas en JSP (Java), garantizando una integración fluida con servicios backend.",
+              "Gestión y optimización de bases de datos relacionales (SQL Server, PostgreSQL, OracleSQL, SQLite), asegurando rendimiento y seguridad en el manejo de datos."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Infaplic",
+        "subtitle": "Ahora ATM Grupo Maggioli",
+        "image": "/enterprises/infaplic.jpg",
+        "experiences": [
+          {
+            "title": "Front-end & Back-end Developer",
+            "startDate": "2018-08-01",
+            "endDate": "2020-05-01",
+            "description": [
+              "Maquetación e integración de páginas web. HTML5, JavaScript, jQuery, CSS3, SASS.",
+              "Desarrollo de Apps móviles para Android e iOS.",
+              "Desarrollo y mantenimiento de aplicaciones dinámicas en JSP (Java), garantizando una integración fluida con servicios backend.",
+              "Gestión y optimización de bases de datos relacionales (SQL Server, PostgreSQL, OracleSQL, SQLite), asegurando rendimiento y seguridad en el manejo de datos."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Accenture",
+        "image": "/enterprises/accenture.svg",
+        "experiences": [
+          {
+            "title": "Senior Developer .NET",
+            "startDate": "2017-08-01",
+            "endDate": "2018-08-01",
+            "description": [
+              "Maquetación e integración de páginas web. JavaScript, SASS, HTML5, jQuery, Razor.",
+              "Administración y creación de contenido Kentico Cloud ASP.NET, SQL Server, C#, Visual Studio."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Avansis",
+        "image": "/enterprises/avansis.png",
+        "experiences": [
+          {
+            "title": "App Developer",
+            "startDate": "2017-08-01",
+            "endDate": "2018-08-01",
+            "description": [
+              "Creación y normalización de base de datos de SQL Server.",
+              "Mantenimiento y creación de proyectos en .NET.",
+              "Mantenimiento de aplicaciones Android.",
+              "Manejo de control de versiones TeamFoundation.",
+              "Creación y mantenimiento de paginas web mediante ASP.NET, Angular, Selenium, HTML5, CSS3, JavaScript."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Grupo Oesía",
+        "image": "/enterprises/oesia.png",
+        "experiences": [
+          {
+            "title": "Administrador de sistemas",
+            "startDate": "2015-05-01",
+            "endDate": "2015-06-15",
+            "description": [
+              "Mantenimiento de sistemas a nivel interno coorporativo.",
+              "Gestión e instalación de redes.",
+              "Plataformado de equipos.",
+              "HelpDesk."
+            ]
+          }
+        ]
+      }
+    ]
   },
   "technologies": {
     "title": "Tecnologías",
@@ -122,5 +228,6 @@
   },
   "footer": {
     "rights": "Portfolio"
-  }
+  },
+  "back": "Volver"
 }

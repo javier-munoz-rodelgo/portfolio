@@ -26,9 +26,9 @@ export default async function HomePage({
   return (
     <main>
       <ScrollProgress />
-      <Header dict={dict.navigation} />
+      <Header dict={dict.navigation} page="home" lang={lang} />
       <Hero dict={dict.hero} />
-      <About dict={dict.about} />
+      <About dict={dict.about} lang={lang} showButton={true} />
       <Technologies dict={dict.technologies} />
       <Projects dict={dict.projects} />
       <Contact dict={dict.contact} />

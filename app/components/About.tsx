@@ -2,8 +2,18 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-export default function About({ dict }: { dict: any }) {
+export default function About({
+  dict,
+  showButton = false,
+  lang = "es",
+}: {
+  dict: any;
+  showButton?: boolean;
+  lang?: string;
+}) {
   // FIXME: Corregir movimiento de la sección
   return (
     <motion.section
@@ -33,10 +43,45 @@ export default function About({ dict }: { dict: any }) {
             {dict.title}
           </h2>
 
-          <p className="mb-6" dangerouslySetInnerHTML={{ __html: dict.p1 }}></p>
-          <p className="mb-6" dangerouslySetInnerHTML={{ __html: dict.p2 }}></p>
-          <p className="mb-6" dangerouslySetInnerHTML={{ __html: dict.p3 }}></p>
-          <p className="mb-6" dangerouslySetInnerHTML={{ __html: dict.p4 }}></p>
+          {showButton ? (
+            <>
+              <p
+                className="mb-6"
+                dangerouslySetInnerHTML={{ __html: dict.p1 }}
+              ></p>
+            </>
+          ) : (
+            <>
+              <p
+                className="mb-6"
+                dangerouslySetInnerHTML={{ __html: dict.p1 }}
+              ></p>
+              <p
+                className="mb-6"
+                dangerouslySetInnerHTML={{ __html: dict.p2 }}
+              ></p>
+              <p
+                className="mb-6"
+                dangerouslySetInnerHTML={{ __html: dict.p3 }}
+              ></p>
+              <p
+                className="mb-6"
+                dangerouslySetInnerHTML={{ __html: dict.p4 }}
+              ></p>
+            </>
+          )}
+
+          {showButton && (
+            <div className="mt-8">
+              <Link
+                href={`/${lang}/about`}
+                className="w-full md:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
+              >
+                {dict.readMore}
+                <ArrowRight size={20} />
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </motion.section>

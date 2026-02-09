@@ -17,12 +17,118 @@
     "viewProjects": "View projects",
     "contact": "Contact"
   },
+  "experience": {
+    "title": "Experience",
+    "present": "Present",
+    "items": [
+      {
+        "name": "ATM Grupo Maggioli",
+        "image": "/projects/atm.png",
+        "experiences": [
+          {
+            "title": "Front-end Manager | UI/UX Solutions Expert",
+            "startDate": "2021-01-01",
+            "endDate": null,
+            "description": [
+              "I lead a team of frontend developers in the creation and integration of modern, responsive, and accessible web interfaces, ensuring high standards of quality and usability.",
+              "Design and development of scalable UI solutions using technologies such as HTML5, JavaScript, TypeScript, SASS, and modern frameworks like Angular and StencilJS, with special focus on modularity and component reuse.",
+              "Implementation of Web Components with StencilJS, efficiently integrated into multiplatform applications.",
+              "Close coordination with UX/UI teams and stakeholders, using tools like Figma and Adobe XD, to transform prototypes into intuitive and consistent digital experiences.",
+              "Promotion and implementation of agile methodologies (Scrum/Kanban), focusing on continuous delivery, process improvement, and cross-team collaboration.",
+              "Active participation in strategic product planning, task prioritization, and key technical decision-making oriented towards scalability and efficiency.",
+              "Constant focus on improving the end-user experience, applying accessibility principles, user-centered design, and usability testing."
+            ]
+          },
+          {
+            "title": "Front-end & Back-end Developer",
+            "startDate": "2020-05-01",
+            "endDate": "2021-01-01",
+            "description": [
+              "Web layout and integration. HTML5, JavaScript, jQuery, CSS3, SASS.",
+              "Development of mobile Apps for Android and iOS.",
+              "Development and maintenance of dynamic applications in JSP (Java), ensuring smooth integration with backend services.",
+              "Management and optimization of relational databases (SQL Server, PostgreSQL, OracleSQL, SQLite), ensuring performance and security in data handling."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Infaplic",
+        "subtitle": "Now ATM Grupo Maggioli",
+        "image": "/enterprises/infaplic.jpg",
+        "experiences": [
+          {
+            "title": "Front-end & Back-end Developer",
+            "startDate": "2018-08-01",
+            "endDate": "2020-05-01",
+            "description": [
+              "Web layout and integration. HTML5, JavaScript, jQuery, CSS3, SASS.",
+              "Development of mobile Apps for Android and iOS.",
+              "Development and maintenance of dynamic applications in JSP (Java), ensuring smooth integration with backend services.",
+              "Management and optimization of relational databases (SQL Server, PostgreSQL, OracleSQL, SQLite), ensuring performance and security in data handling."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Accenture",
+        "image": "/enterprises/accenture.svg",
+        "experiences": [
+          {
+            "title": "Senior Developer .NET",
+            "startDate": "2017-08-01",
+            "endDate": "2018-08-01",
+            "description": [
+              "Web layout and integration. JavaScript, SASS, HTML5, jQuery, Razor.",
+              "Administration and creation of Kentico Cloud ASP.NET content, SQL Server, C#, Visual Studio."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Avansis",
+        "image": "/enterprises/avansis.png",
+        "experiences": [
+          {
+            "title": "App Developer",
+            "startDate": "2017-08-01",
+            "endDate": "2018-08-01",
+            "description": [
+              "Creation and normalization of SQL Server databases.",
+              "Maintenance and creation of .NET projects.",
+              "Maintenance of Android applications.",
+              "Version control management using TeamFoundation.",
+              "Creation and maintenance of web pages using ASP.NET, Angular, Selenium, HTML5, CSS3, JavaScript."
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Grupo Oesía",
+        "image": "/enterprises/oesia.png",
+        "experiences": [
+          {
+            "title": "Systems Administrator",
+            "startDate": "2015-05-01",
+            "endDate": "2015-06-15",
+            "description": [
+              "Internal corporate systems maintenance.",
+              "Network management and installation.",
+              "Computer imaging and deployment.",
+              "HelpDesk."
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "about": {
     "title": "About Me",
     "p1": "Front-end Manager specialized in UI/UX with over 5 years of experience in web development, component system design, and technical leadership. Since 2023 I lead the frontend team at <span class='font-bold'>ATM Grupo Maggioli</span>, where I direct the creation and evolution of <span class='font-bold'>IRIS</span>, a <span class='font-bold'>corporate Design System</span> based on <span class='font-bold underline decoration-sky-500'>Web Components with StencilJS</span> that unifies the company's visual identity after the merger of three companies.",
     "p2": "IRIS is built on a <span class='font-bold'>monorepo managed with Lerna</span>, published on <span class='font-bold'>NPM</span> as an internal library, and offers a complete catalog of components, from fundamental pieces (buttons, icons, alerts) to complex interface solutions like <span class='font-bold'>dashboards, dynamic forms, or translation managers</span>. Its architecture focuses on <span class='font-bold'>scalability, accessibility, performance, and modularity</span>, becoming the transversal standard for new products.",
     "p3": "Additionally, I provide strategic support to other projects as a <span class='font-bold'>Scrum Master</span>, promoting best practices in <span class='font-bold'>CI/CD, automation, Jira management, and agile methodologies</span>, oriented towards continuous delivery and workflow improvement between teams.",
-    "p4": "Previous full-stack development experience with <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP, and SQL</span>, allowing me to have a complete vision of the product cycle and communicate effectively with multidisciplinary profiles."
+    "p4": "Previous full-stack development experience with <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP, and SQL</span>, allowing me to have a complete vision of the product cycle and communicate effectively with multidisciplinary profiles.",
+    "readMore": "Read more"
   },
 
   "technologies": {
@@ -123,5 +229,6 @@
   },
   "footer": {
     "rights": "Portfolio"
-  }
+  },
+  "back": "Back"
 }

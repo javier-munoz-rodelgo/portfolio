@@ -43,13 +43,11 @@ export default function Technologies({ dict }: { dict: any }) {
       id="technologies"
       className="min-h-screen flex flex-col justify-center items-center bg-gray-50 overflow-hidden"
     >
-      <div className="max-w-6xl w-full mx-auto p-6 my-12 relative">
-        <h2 className="text-5xl font-bold mb-6 text-center md:text-left font-caveat">
-          {dict.title}
-        </h2>
+      <div className="max-w-2xl w-full mx-auto p-6 my-12 relative">
+        <h2 className="text-4xl font-bold text-center mb-8">{dict.title}</h2>
 
         <p
-          className="mb-8 text-center md:text-left shadow-xs p-4 rounded-lg bg-white/50"
+          className="mb-8 text-center"
           dangerouslySetInnerHTML={{ __html: dict.p1 }}
         ></p>
 

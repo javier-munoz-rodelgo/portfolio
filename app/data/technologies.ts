@@ -1,0 +1,75 @@
+export const TECHNOLOGIES: Area[] = [
+  {
+    title: "Frontend & Frameworks",
+    technologies: [
+      { text: "React", logo: "/logos/react.svg" },
+      { text: "Next.js", logo: "/logos/nextjs.svg" },
+      { text: "Angular", logo: "/logos/angular.png" },
+      { text: "Vue.js", logo: "/logos/vue.svg" },
+      { text: "StencilJS", logo: "/logos/stenciljs.png" },
+      { text: "Tailwind CSS", logo: "/logos/tailwindcss.svg" },
+      { text: "Bootstrap", logo: "/logos/bootstrap.svg" },
+      { text: "jQuery", logo: "/logos/jquery.svg" },
+      { text: "Vite", logo: "/logos/vite.svg" },
+    ],
+  },
+  {
+    title: "Lenguajes de Programación",
+    technologies: [
+      { text: "TypeScript", logo: "/logos/ts.svg" },
+      { text: "JavaScript", logo: "/logos/js.svg" },
+      { text: "HTML5", logo: "/logos/html5.svg" },
+      { text: "CSS3", logo: "/logos/css3.svg" },
+      { text: "SASS", logo: "/logos/sass.svg" },
+      { text: "C#", logo: "/logos/csharp.svg" },
+      { text: "Java", logo: "/logos/java.png" },
+      { text: "Swift", logo: "/logos/swift.png" },
+      { text: "PHP", logo: "/logos/php.svg" },
+    ],
+  },
+  {
+    title: "Backend & Infraestructura",
+    technologies: [
+      { text: "Node.js", logo: "/logos/nodejs.png" },
+      { text: ".NET", logo: "/logos/net.svg" },
+      { text: "SQL", logo: "/logos/sql.webp" },
+      { text: "MySQL", logo: "/logos/mysql.svg" },
+      { text: "PostgreSQL", logo: "/logos/postgresql.svg" },
+      { text: "SQLite", logo: "/logos/sqlite.svg" },
+      { text: "Firebase", logo: "/logos/firebase.svg" },
+      { text: "Docker", logo: "/logos/docker.svg" },
+    ],
+  },
+  {
+    title: "Herramientas & DevOps",
+    technologies: [
+      { text: "Git", logo: "/logos/git.svg" },
+      { text: "GitHub", logo: "/logos/github.svg" },
+      { text: "Bitbucket", logo: "/logos/bitbucket.svg" },
+      { text: "NPM", logo: "/logos/npm.svg" },
+      { text: "Jest", logo: "/logos/jest.svg" },
+      { text: "Postman", logo: "/logos/postman.svg" },
+      { text: "Jenkins", logo: "/logos/jenkins.svg" },
+      { text: "Sentry", logo: "/logos/sentry.webp" },
+    ],
+  },
+  {
+    title: "Software & Productividad",
+    technologies: [
+      { text: "Trello", logo: "/logos/trello.png" },
+      { text: "Jira", logo: "/logos/jira.png" },
+      { text: "Eclipse", logo: "/logos/eclipse.webp" },
+      { text: "Xcode", logo: "/logos/xcode.svg" },
+      { text: "Android Studio", logo: "/logos/android_studio.svg" },
+    ],
+  },
+  {
+    title: "Inteligencia Artificial",
+    technologies: [
+      { text: "Gemini", logo: "/logos/gemini.svg" },
+      { text: "ChatGPT", logo: "/logos/chatgpt.svg" },
+      { text: "Meta", logo: "/logos/meta.svg" },
+      { text: "Antigravity", logo: "/logos/antigravity.png" },
+    ],
+  },
+];

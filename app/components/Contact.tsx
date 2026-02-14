@@ -17,7 +17,7 @@ export default function ContactPage({ dict }: { dict: any }) {
   const initialState: ContactFormState = { success: false, error: "" };
   const [state, formAction, isPending] = useActionState(
     sendContactEmail,
-    initialState
+    initialState,
   );
 
   // Efecto para mostrar notificaciones basadas en el estado del server action
@@ -39,7 +39,7 @@ export default function ContactPage({ dict }: { dict: any }) {
   return (
     <section
       id="contact"
-      className="min-h-dvh flex flex-col justify-center items-center p-6 my-12"
+      className="min-h-screen flex flex-col justify-center items-center p-6 my-12"
     >
       <div className="max-w-2xl w-full space-y-8">
         <h2 className="text-4xl font-bold text-center">{dict.title}</h2>

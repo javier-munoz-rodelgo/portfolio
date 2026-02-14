@@ -41,7 +41,7 @@ export default function Technologies({ dict }: { dict: any }) {
   return (
     <section
       id="technologies"
-      className="min-h-dvh flex flex-col justify-center items-center bg-gray-50 overflow-hidden"
+      className="min-h-screen flex flex-col justify-center items-center bg-gray-50 overflow-hidden"
     >
       <div className="max-w-6xl w-full mx-auto p-6 my-12 relative">
         <h2 className="text-5xl font-bold mb-6 text-center md:text-left font-caveat">

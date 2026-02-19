@@ -132,7 +132,15 @@
   },
   "technologies": {
     "title": "Tecnologías",
-    "p1": "A lo largo de mi experiencia he trabajado con diversas tecnologías, aplicándolas en proyectos personales y profesionales. Algunas de ellas son:"
+    "p1": "A lo largo de mi experiencia he trabajado con diversas tecnologías, aplicándolas en proyectos personales y profesionales. Algunas de ellas son:",
+    "areas": {
+      "frontend": "Frontend & Frameworks",
+      "languages": "Lenguajes de Programación",
+      "backend": "Backend & Infraestructura",
+      "tools": "Herramientas & DevOps",
+      "software": "Software & Productividad",
+      "ai": "Inteligencia Artificial"
+    }
   },
   "projects": {
     "title": "Proyectos",

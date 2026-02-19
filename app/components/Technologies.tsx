@@ -98,7 +98,7 @@ export default function Technologies({ dict }: { dict: any }) {
               >
                 <div className="p-8 rounded-2xl bg-white shadow-xl border border-gray-100 mx-auto max-w-2xl">
                   <h3 className="text-2xl font-bold mb-8 text-center">
-                    {currentArea.title}
+                    {dict.areas[currentArea.title]}
                   </h3>
                   <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
                     {currentArea.technologies.map(

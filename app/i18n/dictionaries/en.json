@@ -130,10 +130,17 @@
     "p4": "Previous full-stack development experience with <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP, and SQL</span>, allowing me to have a complete vision of the product cycle and communicate effectively with multidisciplinary profiles.",
     "readMore": "Read more"
   },
-
   "technologies": {
     "title": "Technologies",
-    "p1": "Throughout my experience, I have worked with various technologies, applying them in personal and professional projects. Some of them are:"
+    "p1": "Throughout my experience, I have worked with various technologies, applying them in personal and professional projects. Some of them are:",
+    "areas": {
+      "frontend": "Frontend & Frameworks",
+      "languages": "Programming Languages",
+      "backend": "Backend & Infrastructure",
+      "tools": "Tools & DevOps",
+      "software": "Software & Productivity",
+      "ai": "Artificial Intelligence"
+    }
   },
   "projects": {
     "title": "Projects",

@@ -1,6 +1,6 @@
 export const TECHNOLOGIES: Area[] = [
   {
-    title: "Frontend & Frameworks",
+    title: "frontend",
     technologies: [
       { text: "React", logo: "/logos/react.svg" },
       { text: "Next.js", logo: "/logos/nextjs.svg" },
@@ -14,7 +14,7 @@ export const TECHNOLOGIES: Area[] = [
     ],
   },
   {
-    title: "Lenguajes de Programación",
+    title: "languages",
     technologies: [
       { text: "TypeScript", logo: "/logos/ts.svg" },
       { text: "JavaScript", logo: "/logos/js.svg" },
@@ -28,7 +28,7 @@ export const TECHNOLOGIES: Area[] = [
     ],
   },
   {
-    title: "Backend & Infraestructura",
+    title: "backend",
     technologies: [
       { text: "Node.js", logo: "/logos/nodejs.png" },
       { text: ".NET", logo: "/logos/net.svg" },
@@ -41,7 +41,7 @@ export const TECHNOLOGIES: Area[] = [
     ],
   },
   {
-    title: "Herramientas & DevOps",
+    title: "tools",
     technologies: [
       { text: "Git", logo: "/logos/git.svg" },
       { text: "GitHub", logo: "/logos/github.svg" },
@@ -54,7 +54,7 @@ export const TECHNOLOGIES: Area[] = [
     ],
   },
   {
-    title: "Software & Productividad",
+    title: "software",
     technologies: [
       { text: "Trello", logo: "/logos/trello.png" },
       { text: "Jira", logo: "/logos/jira.png" },
@@ -64,7 +64,7 @@ export const TECHNOLOGIES: Area[] = [
     ],
   },
   {
-    title: "Inteligencia Artificial",
+    title: "ai",
     technologies: [
       { text: "Gemini", logo: "/logos/gemini.svg" },
       { text: "ChatGPT", logo: "/logos/chatgpt.svg" },

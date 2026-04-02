@@ -2,7 +2,6 @@ import About from "@/app/components/About";
 import Experience from "@/app/components/Experience";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import ScrollProgress from "@/app/components/ScrollProgress";
 import ScrollToTop from "@/app/components/ScrollToTop";
 import { getDictionary } from "../../i18n/get-dictionary";
 import Link from "next/link";
@@ -24,7 +23,6 @@ export default async function SobreMiPage({
 
   return (
     <main>
-      <ScrollProgress />
       <Header dict={dict.navigation} lang={lang} />
       <About dict={dict.about} lang={lang} showButton={false} />
       <Experience dict={dict.experience} />

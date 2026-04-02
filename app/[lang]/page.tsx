@@ -5,7 +5,6 @@ import Technologies from "@/app/components/Technologies";
 import Projects from "@/app/components/Projects";
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
-import ScrollProgress from "@/app/components/ScrollProgress";
 import ScrollToTop from "@/app/components/ScrollToTop";
 import { getDictionary } from "../i18n/get-dictionary";
 
@@ -25,7 +24,6 @@ export default async function HomePage({
 
   return (
     <main>
-      <ScrollProgress />
       <Header dict={dict.navigation} page="home" lang={lang} />
       <Hero dict={dict.hero} />
       <About dict={dict.about} lang={lang} showButton={true} />

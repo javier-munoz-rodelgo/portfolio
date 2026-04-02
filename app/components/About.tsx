@@ -1,10 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
+/**
+ * Componente que muestra información sobre el autor.
+ * @param dict Diccionario con el contenido en el idioma seleccionado.
+ * @param showButton Si es true, muestra un botón para ir a la página de información.
+ * @param lang Idioma de la página.
+ * @returns Componente About.
+ */
 export default function About({
   dict,
   showButton = false,
@@ -14,15 +21,16 @@ export default function About({
   showButton?: boolean;
   lang?: string;
 }) {
+  const [elementRef, isVisible] = useIntersectionObserver<HTMLElement>();
+
   // FIXME: Corregir movimiento de la sección
   return (
-    <motion.section
+    <section
       id="about"
-      className="min-h-screen flex flex-col justify-center items-center p-6 max-w-6xl mx-auto my-12"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+      ref={elementRef}
+      className={`min-h-screen flex flex-col justify-center items-center p-6 max-w-6xl mx-auto my-12 animate-on-scroll ${
+        isVisible ? "is-visible" : ""
+      }`}
     >
       <h2 className="text-5xl font-caveat font-bold mb-6 text-center md:hidden">
         {dict.title}
@@ -84,6 +92,6 @@ export default function About({
           )}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

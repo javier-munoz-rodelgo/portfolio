@@ -1,10 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { SOCIALS } from "../data/socials";
 
 export default function Hero({ dict }: { dict: any }) {
@@ -14,11 +11,9 @@ export default function Hero({ dict }: { dict: any }) {
       className="min-h-screen flex flex-col justify-center items-center text-center p-6 bg-gradient-to-b from-white to-gray-50"
     >
       {/* Animación de entrada del contenido */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-3xl"
+      <div
+        className="max-w-3xl animate-fade-in-up"
+        style={{ animationFillMode: "both" }}
       >
         {/* Nombre */}
         <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 leading-14">
@@ -27,24 +22,20 @@ export default function Hero({ dict }: { dict: any }) {
         </h1>
 
         {/* Rol o especialidad */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-xl sm:text-2xl text-gray-600 mb-6"
+        <h2
+          className="text-xl sm:text-2xl text-gray-600 mb-6 animate-fade-in-up"
+          style={{ animationDelay: "300ms", animationFillMode: "both" }}
         >
           {dict.role}
-        </motion.h2>
+        </h2>
 
         {/* Descripción corta */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-gray-500 mb-10 leading-relaxed"
+        <p
+          className="text-gray-500 mb-10 leading-relaxed animate-fade-in-up"
+          style={{ animationDelay: "500ms", animationFillMode: "both" }}
         >
           {dict.description}
-        </motion.p>
+        </p>
 
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6 mb-8">
@@ -66,11 +57,9 @@ export default function Hero({ dict }: { dict: any }) {
         </div>
 
         {/* CTA principal */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        <div
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in"
+          style={{ animationDelay: "800ms", animationFillMode: "both" }}
         >
           <Link
             href="#projects"
@@ -85,8 +74,8 @@ export default function Hero({ dict }: { dict: any }) {
           >
             {dict.contact || "Contact"}
           </Link>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 }

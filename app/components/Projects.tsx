@@ -1,49 +1,41 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 // TODO: Añadir todos las secciones nuevas de los proyectos como tags.
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
-
 export default function Projects({ dict }: { dict: any }) {
   const projects = dict.items || [];
+  const [elementRef, isVisible] = useIntersectionObserver<HTMLDivElement>();
 
   return (
     <section id="projects" className="my-12 p-6 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-12">{dict.title}</h2>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+      <div
+        ref={elementRef}
+        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 animate-on-scroll ${
+          isVisible ? "is-visible" : ""
+        }`}
       >
         {projects.map((p: any, i: number) => (
-          <motion.a
+          <a
             href={p.link}
             target="_blank"
             key={i}
-            variants={item}
-            className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border-1 border-gray-200 rounded-xl"
+            className="bg-white shadow hover:shadow-lg transition overflow-hidden border border-gray-200 rounded-xl"
+            style={{ 
+              transitionDelay: `${i * 150}ms`,
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+              transitionProperty: 'opacity, transform, box-shadow' 
+            }}
           >
             <Image
               alt={p.title}
               src={p.image}
-              className="w-full h-48 object-contain border-b-1 border-gray-200 p-5"
+              className="w-full h-48 object-contain border-b border-gray-200 p-5"
               width={500}
               height={500}
             />
@@ -58,9 +50,9 @@ export default function Projects({ dict }: { dict: any }) {
               </div>
               <p className="text-gray-600">{p.description}</p>
             </div>
-          </motion.a>
+          </a>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }

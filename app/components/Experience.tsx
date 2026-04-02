@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   ExperienceDictionary,
   Enterprise,
   ExperienceItem,
 } from "@/app/models/experience";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 /**
  * Componente que renderiza la sección de experiencia laboral.
@@ -15,16 +15,17 @@ import {
  * @param dict - Objeto que contiene las traducciones para la sección de experiencia.
  */
 export default function Experience({ dict }: { dict: ExperienceDictionary }) {
+  const [elementRef, isVisible] = useIntersectionObserver<HTMLElement>();
+
   if (!dict || !dict.items) return null;
 
   return (
-    <motion.section
+    <section
       id="experience"
-      className="min-h-screen flex flex-col justify-center items-center p-6 max-w-6xl mx-auto my-12"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+      ref={elementRef}
+      className={`min-h-screen flex flex-col justify-center items-center p-6 max-w-6xl mx-auto my-12 animate-on-scroll ${
+        isVisible ? "is-visible" : ""
+      }`}
     >
       {/* Timeline */}
       <h2 className="text-5xl font-bold mb-6 text-center">{dict.title}</h2>
@@ -86,6 +87,6 @@ export default function Experience({ dict }: { dict: ExperienceDictionary }) {
           ))}
         </div>
       ))}
-    </motion.section>
+    </section>
   );
 }

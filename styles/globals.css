@@ -4,6 +4,53 @@
 @theme {
   --font-sans: var(--font-sans);
   --font-caveat: var(--font-caveat), cursive;
+
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-slide-in-right: slide-in-right 0.5s ease-out forwards;
+  --animate-slide-in-left: slide-in-left 0.5s ease-out forwards;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 html {
@@ -12,4 +59,17 @@ html {
 
 .material-symbols-rounded {
   font-size: var(--text-base) !important;
+}
+
+/* Utilities for intersection observer transitions */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

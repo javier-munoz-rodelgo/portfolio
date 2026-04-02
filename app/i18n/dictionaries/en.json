@@ -7,15 +7,23 @@
   },
   "meta": {
     "title": "Javier | Portfolio",
-    "description": "Portfolio of Javier, Front-end Manager & UI Developer specialized in building accessible, scalable, and high-performance web applications.",
+    "description": "Portfolio of Javier, Front-end Manager and UI Developer specialized in building accessible, scalable, and high-performance web applications.",
     "keywords": "Front-end, Web Development, UI/UX, React, Next.js, StencilJS, Design Systems"
   },
   "hero": {
     "greeting": "Hi, I'm",
     "role": "Front-end Manager & UI Developer",
-    "description": "Passionate about building clean, fast, and usable interfaces. I love combining design and code to create web experiences that stand out.",
+    "description": "Passionate about building clean, fast, and accessible interfaces. I love combining design and code to create web experiences that truly stand out.",
     "viewProjects": "View projects",
     "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Front-end Manager specialized in UI/UX with over 5 years of experience in web development, design systems, and technical leadership. Since 2023, I lead the front-end team at <span class='font-bold'>ATM Grupo Maggioli</span>, where I direct the evolution of <span class='font-bold'>IRIS</span>: a <span class='font-bold'>corporate Design System</span> built with <span class='font-bold underline decoration-sky-500'>Web Components and StencilJS</span> to unify the visual identity of three merged companies.",
+    "p2": "IRIS is built on a <span class='font-bold'>Lerna-managed monorepo</span> and published as an internal <span class='font-bold'>NPM</span> library. It provides a comprehensive component catalog, ranging from foundational elements (buttons, icons, alerts) to complex interface solutions like <span class='font-bold'>dashboards, dynamic forms, and translation managers</span>. The architecture is centered on <span class='font-bold'>scalability, accessibility, performance, and modularity</span>.",
+    "p3": "Additionally, I provide strategic support as a <span class='font-bold'>Scrum Master</span>, driving best practices in <span class='font-bold'>CI/CD, automation, Jira management, and agile methodologies</span> to optimize cross-team delivery and workflow.",
+    "p4": "My previous full-stack experience with <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP, and SQL</span> gives me a holistic view of the product lifecycle, enabling effective communication across multidisciplinary teams.",
+    "readMore": "Read more"
   },
   "experience": {
     "title": "Experience",
@@ -30,13 +38,13 @@
             "startDate": "2021-01-01",
             "endDate": null,
             "description": [
-              "I lead a team of frontend developers in the creation and integration of modern, responsive, and accessible web interfaces, ensuring high standards of quality and usability.",
-              "Design and development of scalable UI solutions using technologies such as HTML5, JavaScript, TypeScript, SASS, and modern frameworks like Angular and StencilJS, with special focus on modularity and component reuse.",
-              "Implementation of Web Components with StencilJS, efficiently integrated into multiplatform applications.",
-              "Close coordination with UX/UI teams and stakeholders, using tools like Figma and Adobe XD, to transform prototypes into intuitive and consistent digital experiences.",
-              "Promotion and implementation of agile methodologies (Scrum/Kanban), focusing on continuous delivery, process improvement, and cross-team collaboration.",
-              "Active participation in strategic product planning, task prioritization, and key technical decision-making oriented towards scalability and efficiency.",
-              "Constant focus on improving the end-user experience, applying accessibility principles, user-centered design, and usability testing."
+              "Lead a front-end team in creating and integrating modern, responsive, and accessible web interfaces, ensuring high standards of quality and usability.",
+              "Design and develop scalable UI solutions using HTML5, JavaScript, TypeScript, SASS, and modern frameworks like Angular and StencilJS, with a focus on modularity and component reuse.",
+              "Implement Web Components with StencilJS, integrated efficiently into cross-platform applications.",
+              "Coordinate with UX/UI teams and stakeholders using tools like Figma and Adobe XD to transform prototypes into intuitive and consistent digital experiences.",
+              "Champion agile methodologies (Scrum/Kanban), focusing on continuous delivery, process improvement, and cross-team collaboration.",
+              "Participate in strategic product planning, task prioritization, and key technical decision-making for long-term scalability and efficiency.",
+              "Consistently improve end-user experiences by applying accessibility principles, user-centered design, and usability testing."
             ]
           },
           {
@@ -44,10 +52,10 @@
             "startDate": "2020-05-01",
             "endDate": "2021-01-01",
             "description": [
-              "Web layout and integration. HTML5, JavaScript, jQuery, CSS3, SASS.",
-              "Development of mobile Apps for Android and iOS.",
-              "Development and maintenance of dynamic applications in JSP (Java), ensuring smooth integration with backend services.",
-              "Management and optimization of relational databases (SQL Server, PostgreSQL, OracleSQL, SQLite), ensuring performance and security in data handling."
+              "Web layout and UI integration using HTML5, JavaScript, jQuery, CSS3, and SASS.",
+              "Development of mobile applications for Android and iOS.",
+              "Maintenance and development of dynamic JSP (Java) applications, ensuring seamless integration with backend services.",
+              "Management and optimization of relational databases (SQL Server, PostgreSQL, OracleSQL, SQLite), ensuring high performance and data security."
             ]
           }
         ]
@@ -62,10 +70,10 @@
             "startDate": "2018-08-01",
             "endDate": "2020-05-01",
             "description": [
-              "Web layout and integration. HTML5, JavaScript, jQuery, CSS3, SASS.",
-              "Development of mobile Apps for Android and iOS.",
-              "Development and maintenance of dynamic applications in JSP (Java), ensuring smooth integration with backend services.",
-              "Management and optimization of relational databases (SQL Server, PostgreSQL, OracleSQL, SQLite), ensuring performance and security in data handling."
+              "Web layout and UI integration using HTML5, JavaScript, jQuery, CSS3, and SASS.",
+              "Development of mobile applications for Android and iOS.",
+              "Maintenance and development of dynamic JSP (Java) applications, ensuring seamless integration with backend services.",
+              "Management and optimization of relational databases (SQL Server, PostgreSQL, OracleSQL, SQLite), ensuring high performance and data security."
             ]
           }
         ]
@@ -75,12 +83,12 @@
         "image": "/enterprises/accenture.svg",
         "experiences": [
           {
-            "title": "Senior Developer .NET",
+            "title": "Senior .NET Developer",
             "startDate": "2017-08-01",
             "endDate": "2018-08-01",
             "description": [
-              "Web layout and integration. JavaScript, SASS, HTML5, jQuery, Razor.",
-              "Administration and creation of Kentico Cloud ASP.NET content, SQL Server, C#, Visual Studio."
+              "Web layout and integration using JavaScript, SASS, HTML5, jQuery, and Razor.",
+              "Administration and content creation for Kentico Cloud using ASP.NET, SQL Server, C#, and Visual Studio."
             ]
           }
         ]
@@ -94,11 +102,11 @@
             "startDate": "2017-08-01",
             "endDate": "2018-08-01",
             "description": [
-              "Creation and normalization of SQL Server databases.",
-              "Maintenance and creation of .NET projects.",
-              "Maintenance of Android applications.",
-              "Version control management using TeamFoundation.",
-              "Creation and maintenance of web pages using ASP.NET, Angular, Selenium, HTML5, CSS3, JavaScript."
+              "Design and normalization of SQL Server databases.",
+              "Maintenance and development of .NET projects.",
+              "Android application maintenance.",
+              "Version control management with Team Foundation Server.",
+              "Development and maintenance of web platforms using ASP.NET, Angular, Selenium, HTML5, CSS3, and JavaScript."
             ]
           }
         ]
@@ -112,27 +120,19 @@
             "startDate": "2015-05-01",
             "endDate": "2015-06-15",
             "description": [
-              "Internal corporate systems maintenance.",
-              "Network management and installation.",
-              "Computer imaging and deployment.",
-              "HelpDesk."
+              "Corporate internal systems maintenance.",
+              "Network installation and management.",
+              "Computer imaging and workstation deployment.",
+              "Help Desk support."
             ]
           }
         ]
       }
     ]
   },
-  "about": {
-    "title": "About Me",
-    "p1": "Front-end Manager specialized in UI/UX with over 5 years of experience in web development, component system design, and technical leadership. Since 2023 I lead the frontend team at <span class='font-bold'>ATM Grupo Maggioli</span>, where I direct the creation and evolution of <span class='font-bold'>IRIS</span>, a <span class='font-bold'>corporate Design System</span> based on <span class='font-bold underline decoration-sky-500'>Web Components with StencilJS</span> that unifies the company's visual identity after the merger of three companies.",
-    "p2": "IRIS is built on a <span class='font-bold'>monorepo managed with Lerna</span>, published on <span class='font-bold'>NPM</span> as an internal library, and offers a complete catalog of components, from fundamental pieces (buttons, icons, alerts) to complex interface solutions like <span class='font-bold'>dashboards, dynamic forms, or translation managers</span>. Its architecture focuses on <span class='font-bold'>scalability, accessibility, performance, and modularity</span>, becoming the transversal standard for new products.",
-    "p3": "Additionally, I provide strategic support to other projects as a <span class='font-bold'>Scrum Master</span>, promoting best practices in <span class='font-bold'>CI/CD, automation, Jira management, and agile methodologies</span>, oriented towards continuous delivery and workflow improvement between teams.",
-    "p4": "Previous full-stack development experience with <span class='font-bold'>Angular, JavaScript/TypeScript, SASS, Java/JSP, and SQL</span>, allowing me to have a complete vision of the product cycle and communicate effectively with multidisciplinary profiles.",
-    "readMore": "Read more"
-  },
   "technologies": {
     "title": "Technologies",
-    "p1": "Throughout my experience, I have worked with various technologies, applying them in personal and professional projects. Some of them are:",
+    "p1": "Throughout my experience, I have worked with various technologies across personal and professional projects. Here are some of them:",
     "areas": {
       "frontend": "Frontend & Frameworks",
       "languages": "Programming Languages",
@@ -147,28 +147,28 @@
     "items": [
       {
         "title": "IRIS",
-        "description": "IRIS Web Components is a modern architecture based on a monorepo managed with Lerna, centralizing all visual components of the IRIS ecosystem into independent, reusable, and scalable packages, developed with Stencil.",
+        "description": "IRIS Web Components is a modern architecture based on a Lerna-managed monorepo. It centralizes all visual components of the IRIS ecosystem into independent, reusable, and scalable packages developed with Stencil.",
         "tags": ["Professional"],
         "image": "/projects/iris.svg",
         "link": "https://iris.atm-maggioli.es/"
       },
       {
         "title": "Mobile Apps",
-        "description": "Solutions for file management, payments, and cloud inquiries.",
+        "description": "Enterprise solutions for file management, cloud-based payments, and digital inquiries.",
         "tags": ["Professional"],
         "image": "/projects/atm.png",
         "link": "https://play.google.com/store/apps/dev?id=8222897177929282618&hl=en"
       },
       {
-        "title": "Electronic Headquarters",
-        "description": "Citizen platform to consult file status, pay fees and taxes (Virtual Tax Office), manage Municipal Register tasks, Contractor Profile tracking, automatic registrations, etc.",
+        "title": "Digital Government Portal",
+        "description": "A citizen-facing platform for tracking file status, paying taxes and fees (Virtual Tax Office), managing Municipal Registry records, monitoring Contractor Profiles, and handling automated registrations.",
         "tags": ["Professional"],
         "image": "/projects/atm.png",
         "link": "https://www.atm-maggioli.es/software-y-consultoria/administracion-electronica/"
       },
       {
-        "title": "Integral Tax Management",
-        "description": "Cloud software platform for tax management, voluntary and executive collection, inspection, and fines.",
+        "title": "Comprehensive Tax Management",
+        "description": "A cloud-based software platform for comprehensive tax management, voluntary and executive collection, auditing, and fines.",
         "tags": ["Professional"],
         "image": "/projects/atm.png",
         "link": "https://www.atm-maggioli.es/software-y-consultoria/gestion-tributaria-y-recaudacion/"
@@ -184,7 +184,7 @@
   },
   "contact": {
     "title": "Contact",
-    "description": "If you want to collaborate or have a proposal, feel free to write to me.",
+    "description": "If you'd like to collaborate or have a proposal, feel free to reach out.",
     "name": "Name",
     "email": "Email",
     "message": "Message",

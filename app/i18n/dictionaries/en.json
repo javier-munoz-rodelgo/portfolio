@@ -153,6 +153,13 @@
         "link": "https://iris.atm-maggioli.es/"
       },
       {
+        "title": "Soft Skills",
+        "description": "The key that adds value in a world that changes faster than we learn.",
+        "tags": ["Professional"],
+        "image": "/projects/competencias_transversales.svg",
+        "link": "https://competenciastransversales.es/"
+      },
+      {
         "title": "Mobile Apps",
         "description": "Enterprise solutions for file management, cloud-based payments, and digital inquiries.",
         "tags": ["Professional"],

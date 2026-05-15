@@ -153,6 +153,13 @@
         "link": "https://iris.atm-maggioli.es/"
       },
       {
+        "title": "Competencias transversales",
+        "description": "La llave que aporta valor en un mundo que cambia más rápido de lo que aprendemos.",
+        "tags": ["Profesional"],
+        "image": "/projects/competencias_transversales.svg",
+        "link": "https://competenciastransversales.es/"
+      },
+      {
         "title": "Apps móviles",
         "description": "Soluciones para la gestión de expedientes, pagos y consultas en la nube.",
         "tags": ["Profesional"],

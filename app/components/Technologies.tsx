@@ -1,141 +1,130 @@
 "use client";
-import { useState, useRef } from "react";
+
+import { useEffect, useRef, useState } from "react";
+
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TECHNOLOGIES } from "@/app/data/technologies";
 
-export default function Technologies({ dict }: { dict: any }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
+type TechnologiesDict = {
+  title: string;
+  p1: string;
+  areas: Record<string, string>;
+};
 
-  const paginate = (newDirection: number) => {
-    setDirection(newDirection);
-    setCurrentIndex((prevIndex) => {
-      let nextIndex = prevIndex + newDirection;
-      if (nextIndex < 0) nextIndex = TECHNOLOGIES.length - 1;
-      if (nextIndex >= TECHNOLOGIES.length) nextIndex = 0;
-      return nextIndex;
-    });
-  };
+export default function Technologies({ dict }: { dict: TechnologiesDict }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const transitionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
+  const areas = TECHNOLOGIES;
+  const activeArea = areas[activeIndex];
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
+  const handleTabChange = (index: number) => {
+    if (index === activeIndex) return;
 
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
-    
-    if (isLeftSwipe) {
-      paginate(1);
-    } else if (isRightSwipe) {
-      paginate(-1);
+    setVisible(false);
+
+    if (transitionTimerRef.current) {
+      clearTimeout(transitionTimerRef.current);
     }
-    
-    setTouchStart(0);
-    setTouchEnd(0);
+
+    transitionTimerRef.current = setTimeout(() => {
+      setActiveIndex(index);
+      setVisible(true);
+    }, 140);
   };
 
-  const currentArea = TECHNOLOGIES[currentIndex];
+  useEffect(() => {
+    return () => {
+      if (transitionTimerRef.current) {
+        clearTimeout(transitionTimerRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section
       id="technologies"
-      className="min-h-screen flex flex-col justify-center items-center bg-gray-50 overflow-hidden"
+      className="min-h-screen bg-slate-50 py-20 sm:py-24"
+      aria-labelledby="technologies-title"
     >
-      <div className="max-w-2xl w-full mx-auto p-6 my-12 relative">
-        <h2 className="text-4xl font-bold text-center mb-8">{dict.title}</h2>
-
-        <p
-          className="mb-8 text-center"
-          dangerouslySetInnerHTML={{ __html: dict.p1 }}
-        ></p>
-
-        <div className="relative flex items-center justify-center min-h-[400px]">
-          {/* Navigation Arrows */}
-          <button
-            onClick={() => paginate(-1)}
-            className="absolute left-0 z-10 p-2 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors md:-left-4"
-            aria-label="Previous category"
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <header className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+          <h2
+            id="technologies-title"
+            className="text-4xl font-bold tracking-tight text-slate-900"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600" />
-          </button>
+            {dict.title}
+          </h2>
+          <p
+            className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg"
+            dangerouslySetInnerHTML={{ __html: dict.p1 }}
+          />
+        </header>
 
-          <button
-            onClick={() => paginate(1)}
-            className="absolute right-0 z-10 p-2 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors md:-right-4"
-            aria-label="Next category"
+        <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl shadow-slate-900/5 sm:p-6">
+          <div
+            className="mb-6 flex gap-2 overflow-x-auto pb-1 sm:mb-8"
+            role="tablist"
+            aria-label="Technology categories"
           >
-            <ChevronRight className="w-6 h-6 text-gray-600" />
-          </button>
+            {areas.map((area, index) => {
+              const selected = index === activeIndex;
+              const areaLabel = dict.areas[area.title] ?? area.title;
 
-          <div className="w-full max-w-4xl overflow-hidden py-4 px-1"
-               onTouchStart={handleTouchStart}
-               onTouchMove={handleTouchMove}
-               onTouchEnd={handleTouchEnd}
-          >
-            <div
-              key={currentIndex}
-              className={`w-full ${direction >= 0 ? 'animate-slide-in-right' : 'animate-slide-in-left'}`}
-            >
-              <div className="p-8 rounded-2xl bg-white shadow-xl border border-gray-100 mx-auto max-w-2xl">
-                <h3 className="text-2xl font-bold mb-8 text-center">
-                  {dict.areas[currentArea.title]}
-                </h3>
-                <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
-                  {currentArea.technologies.map(
-                    (item: any, index: number) => (
-                      <li
-                        key={index}
-                        className="flex flex-col items-center gap-3 p-2 hover:scale-110 transition-transform cursor-default"
-                      >
-                        <div className="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
-                          <Image
-                            src={item.logo}
-                            alt={item.text}
-                            width={64}
-                            height={64}
-                            className="object-contain"
-                            style={{ maxHeight: "100%", maxWidth: "100%" }}
-                          />
-                        </div>
-                        <span className="text-xs font-medium text-gray-700 text-center">
-                          {item.text}
-                        </span>
-                      </li>
-                    ),
-                  )}
-                </ul>
-              </div>
-            </div>
+              return (
+                <button
+                  key={area.title}
+                  id={`tech-tab-${area.title}`}
+                  role="tab"
+                  type="button"
+                  aria-selected={selected}
+                  aria-controls={`tech-panel-${area.title}`}
+                  tabIndex={selected ? 0 : -1}
+                  onClick={() => handleTabChange(index)}
+                  className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 ${
+                    selected
+                      ? "bg-slate-900 text-white shadow-md"
+                      : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                  }`}
+                >
+                  {areaLabel}
+                </button>
+              );
+            })}
           </div>
-        </div>
 
-        {/* Indicators */}
-        <div className="flex justify-center gap-3 mt-12">
-          {TECHNOLOGIES.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setDirection(index > currentIndex ? 1 : -1);
-                setCurrentIndex(index);
-              }}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "w-8 bg-purple-600"
-                  : "w-2.5 bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`Go to category ${index + 1}`}
-            />
-          ))}
+          <div
+            id={`tech-panel-${activeArea.title}`}
+            role="tabpanel"
+            aria-labelledby={`tech-tab-${activeArea.title}`}
+            className={`grid grid-cols-2 gap-3 transition-all duration-300 sm:grid-cols-3 lg:grid-cols-4 ${
+              visible ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"
+            }`}
+          >
+            {activeArea.technologies.map((item, index) => (
+              <article
+                key={`${activeArea.title}-${item.text}`}
+                style={{ transitionDelay: visible ? `${index * 35}ms` : "0ms" }}
+                className={`group rounded-2xl border border-slate-200 bg-slate-50 px-4 py-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white ${
+                  visible ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"
+                }`}
+              >
+                <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-xl bg-white ring-1 ring-slate-200">
+                  <Image
+                    src={item.logo}
+                    alt={item.text}
+                    width={56}
+                    height={56}
+                    className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+                  />
+                </div>
+                <p className="text-center text-sm font-medium text-slate-700 group-hover:text-slate-900">
+                  {item.text}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

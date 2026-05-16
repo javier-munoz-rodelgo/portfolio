@@ -25,11 +25,11 @@ export default function Projects({ dict }: { dict: any }) {
             target="_blank"
             key={i}
             className="bg-white shadow hover:shadow-lg transition overflow-hidden border border-gray-200 rounded-xl"
-            style={{ 
+            style={{
               transitionDelay: `${i * 150}ms`,
               opacity: isVisible ? 1 : 0,
-              transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-              transitionProperty: 'opacity, transform, box-shadow' 
+              transform: isVisible ? "translateY(0)" : "translateY(20px)",
+              transitionProperty: "opacity, transform, box-shadow",
             }}
           >
             <Image

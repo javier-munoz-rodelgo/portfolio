@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "flag-icons/css/flag-icons.min.css";
+@import "@material-symbols/font-400/rounded.css";
 
 @theme {
   --font-sans: var(--font-sans);
@@ -65,7 +65,9 @@ html {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
   will-change: opacity, transform;
 }
 

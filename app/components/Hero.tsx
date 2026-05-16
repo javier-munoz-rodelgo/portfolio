@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SOCIALS } from "../data/socials";
 
 export default function Hero({ dict }: { dict: any }) {
@@ -10,18 +10,15 @@ export default function Hero({ dict }: { dict: any }) {
       id="home"
       className="min-h-screen flex flex-col justify-center items-center text-center p-6 bg-gradient-to-b from-white to-gray-50"
     >
-      {/* Animación de entrada del contenido */}
       <div
         className="max-w-3xl animate-fade-in-up"
         style={{ animationFillMode: "both" }}
       >
-        {/* Nombre */}
         <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 leading-14">
           {dict.greeting}{" "}
           <span className="text-purple-600 font-caveat">Javier Muñoz</span>
         </h1>
 
-        {/* Rol o especialidad */}
         <h2
           className="text-xl sm:text-2xl text-gray-600 mb-6 animate-fade-in-up"
           style={{ animationDelay: "300ms", animationFillMode: "both" }}
@@ -29,7 +26,6 @@ export default function Hero({ dict }: { dict: any }) {
           {dict.role}
         </h2>
 
-        {/* Descripción corta */}
         <p
           className="text-gray-500 mb-10 leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "500ms", animationFillMode: "both" }}
@@ -37,7 +33,6 @@ export default function Hero({ dict }: { dict: any }) {
           {dict.description}
         </p>
 
-        {/* Social Links */}
         <div className="flex items-center justify-center gap-6 mb-8">
           {SOCIALS.map((social) => (
             <a
@@ -48,15 +43,16 @@ export default function Hero({ dict }: { dict: any }) {
               className="text-gray-600 hover:text-purple-600 hover:scale-110 transition-all duration-300 transform"
               aria-label={social.name}
             >
-              <FontAwesomeIcon
-                icon={social.icon}
-                style={{ fontSize: "28px" }}
+              <Image
+                src={social.icon}
+                alt={social.name}
+                width={28}
+                height={28}
               />
             </a>
           ))}
         </div>
 
-        {/* CTA principal */}
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in"
           style={{ animationDelay: "800ms", animationFillMode: "both" }}

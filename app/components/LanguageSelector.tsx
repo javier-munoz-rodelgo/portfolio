@@ -30,16 +30,18 @@ export default function LanguageSelector() {
   };
 
   const languages = [
-    { code: "es", label: "Español", flag: "fi fi-es" },
-    { code: "en", label: "English", flag: "fi fi-gb" },
+    { code: "es", label: "Español", flag: "🇪🇸" },
+    { code: "en", label: "English", flag: "🇬🇧" },
   ];
 
   return (
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-5! h-5! rounded-full cursor-pointer ${languages.find((l) => l.code === currentLang)?.flag} bg-cover!`}
-      ></button>
+        className="h-8 w-8 rounded-full cursor-pointer text-base"
+      >
+        {languages.find((l) => l.code === currentLang)?.flag}
+      </button>
 
       {isOpen && (
         <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden py-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
@@ -47,11 +49,14 @@ export default function LanguageSelector() {
             <Link
               key={lang.code}
               href={getRedirectedPathname(lang.code)}
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                document.cookie = `NEXT_LOCALE=${lang.code}; path=/; max-age=31536000; samesite=lax`;
+                setIsOpen(false);
+              }}
               className={`flex items-center gap-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors
                 ${currentLang === lang.code ? "text-purple-600 font-semibold bg-purple-50" : "text-gray-600"}`}
             >
-              <span className={lang.flag}></span>
+              <span>{lang.flag}</span>
               {lang.label}
             </Link>
           ))}

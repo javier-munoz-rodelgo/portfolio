@@ -5,7 +5,6 @@ import Footer from "@/app/components/Footer";
 import ScrollToTop from "@/app/components/ScrollToTop";
 import { getDictionary } from "../../i18n/get-dictionary";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 
 /**
  * Componente de la página "Sobre mi".
@@ -32,7 +31,9 @@ export default async function SobreMiPage({
           href={`/${lang}`}
           className="w-full md:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 border-2 border-purple-600 text-purple-600 rounded-full hover:border-purple-700 hover:text-purple-700 transition-colors"
         >
-          <ArrowLeft size={20} />
+          <span className="material-symbols-rounded" aria-hidden="true">
+            arrow_back
+          </span>
           {dict.back}
         </Link>
       </section>

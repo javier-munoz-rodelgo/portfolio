@@ -32,7 +32,7 @@ const validateResponse = (response: any) => {
  */
 export async function sendContactEmail(
   prevState: ContactFormState,
-  formData: FormData
+  formData: FormData,
 ): Promise<ContactFormState> {
   let response;
   // Obtenemos los datos del formulario.

@@ -107,7 +107,9 @@ export default function Technologies({ dict }: { dict: TechnologiesDict }) {
                 key={`${activeArea.title}-${item.text}`}
                 style={{ transitionDelay: visible ? `${index * 35}ms` : "0ms" }}
                 className={`group rounded-2xl border border-slate-200 bg-slate-50 px-4 py-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white ${
-                  visible ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"
+                  visible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-1 opacity-0"
                 }`}
               >
                 <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-xl bg-white ring-1 ring-slate-200">

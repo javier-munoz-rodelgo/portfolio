@@ -16,6 +16,11 @@ const defaultLocale = "es";
  * @returns La cadena del mejor idioma coincidente
  */
 function getLocale(request: NextRequest) {
+  const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
+  if (cookieLocale && locales.includes(cookieLocale)) {
+    return cookieLocale;
+  }
+
   const headers = {
     "accept-language": request.headers.get("accept-language") || "",
   };
@@ -39,7 +44,7 @@ function getLocale(request: NextRequest) {
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
   if (pathnameHasLocale) return;

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, RefObject } from 'react';
+import { useEffect, useState, useRef, RefObject } from "react";
 
 /**
  * Hook para detectar cuando un elemento entra en el viewport.
@@ -8,7 +8,7 @@ import { useEffect, useState, useRef, RefObject } from 'react';
  */
 export function useIntersectionObserver<T extends HTMLElement>(
   options = {},
-  once = true
+  once = true,
 ): [RefObject<T | null>, boolean] {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<T>(null);
@@ -17,19 +17,22 @@ export function useIntersectionObserver<T extends HTMLElement>(
     const element = elementRef.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        if (once) {
-          observer.unobserve(element);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (once) {
+            observer.unobserve(element);
+          }
+        } else if (!once) {
+          setIsVisible(false);
         }
-      } else if (!once) {
-        setIsVisible(false);
-      }
-    }, {
-      threshold: 0.1,
-      ...options
-    });
+      },
+      {
+        threshold: 0.1,
+        ...options,
+      },
+    );
 
     observer.observe(element);
 

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 /**
@@ -86,7 +85,9 @@ export default function About({
                 className="w-full md:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
               >
                 {dict.readMore}
-                <ArrowRight size={20} />
+                <span className="material-symbols-rounded" aria-hidden="true">
+                  arrow_forward
+                </span>
               </Link>
             </div>
           )}

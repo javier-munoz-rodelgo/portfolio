@@ -8,26 +8,26 @@ export default function Hero({ dict }: { dict: any }) {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center items-center text-center p-6 bg-gradient-to-b from-white to-gray-50"
+      className="min-h-screen flex flex-col justify-center items-center text-center p-6 bg-gradient-to-b from-white to-gray-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
     >
       <div
         className="max-w-3xl animate-fade-in-up"
         style={{ animationFillMode: "both" }}
       >
-        <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 leading-14">
+        <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 leading-14 dark:text-slate-100">
           {dict.greeting}{" "}
           <span className="text-purple-600 font-caveat">Javier Muñoz</span>
         </h1>
 
         <h2
-          className="text-xl sm:text-2xl text-gray-600 mb-6 animate-fade-in-up"
+          className="text-xl sm:text-2xl text-gray-600 mb-6 animate-fade-in-up dark:text-slate-300"
           style={{ animationDelay: "300ms", animationFillMode: "both" }}
         >
           {dict.role}
         </h2>
 
         <p
-          className="text-gray-500 mb-10 leading-relaxed animate-fade-in-up"
+          className="text-gray-500 mb-10 leading-relaxed animate-fade-in-up dark:text-slate-400"
           style={{ animationDelay: "500ms", animationFillMode: "both" }}
         >
           {dict.description}
@@ -40,7 +40,7 @@ export default function Hero({ dict }: { dict: any }) {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-purple-600 hover:scale-110 transition-all duration-300 transform"
+              className="text-gray-600 hover:text-purple-600 dark:text-slate-300 dark:hover:text-purple-400 hover:scale-110 transition-all duration-300 transform"
               aria-label={social.name}
             >
               <Image
@@ -66,7 +66,7 @@ export default function Hero({ dict }: { dict: any }) {
 
           <Link
             href="#contact"
-            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors w-full md:w-auto"
+            className="border border-gray-300 text-gray-700 hover:bg-gray-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800 px-8 py-3 rounded-full font-medium transition-colors w-full md:w-auto"
           >
             {dict.contact || "Contact"}
           </Link>

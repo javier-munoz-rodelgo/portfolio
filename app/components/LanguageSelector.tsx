@@ -38,13 +38,13 @@ export default function LanguageSelector() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="h-8 w-8 rounded-full cursor-pointer text-base"
+        className="h-8 w-8 rounded-full cursor-pointer text-base ring-1 ring-gray-300 bg-white/70 dark:ring-slate-700 dark:bg-slate-900/70"
       >
         {languages.find((l) => l.code === currentLang)?.flag}
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden py-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="absolute right-0 top-full mt-2 w-32 bg-white shadow-lg border border-gray-100 dark:bg-slate-900 dark:shadow-black/30 dark:border-slate-700 rounded-xl overflow-hidden py-1 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
           {languages.map((lang) => (
             <Link
               key={lang.code}
@@ -53,8 +53,8 @@ export default function LanguageSelector() {
                 document.cookie = `NEXT_LOCALE=${lang.code}; path=/; max-age=31536000; samesite=lax`;
                 setIsOpen(false);
               }}
-              className={`flex items-center gap-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors
-                ${currentLang === lang.code ? "text-purple-600 font-semibold bg-purple-50" : "text-gray-600"}`}
+              className={`flex items-center gap-3 px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors
+                ${currentLang === lang.code ? "text-purple-600 dark:text-purple-300 font-semibold bg-purple-50 dark:bg-purple-900/40" : "text-gray-600 dark:text-slate-300"}`}
             >
               <span>{lang.flag}</span>
               {lang.label}

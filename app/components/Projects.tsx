@@ -24,7 +24,7 @@ export default function Projects({ dict }: { dict: any }) {
             href={p.link}
             target="_blank"
             key={i}
-            className="bg-white shadow hover:shadow-lg transition overflow-hidden border border-gray-200 rounded-xl"
+            className="bg-white shadow hover:shadow-lg border border-gray-200 dark:bg-slate-900 dark:hover:shadow-xl dark:hover:shadow-black/30 dark:border-slate-700 transition overflow-hidden rounded-xl"
             style={{
               transitionDelay: `${i * 150}ms`,
               opacity: isVisible ? 1 : 0,
@@ -35,7 +35,7 @@ export default function Projects({ dict }: { dict: any }) {
             <Image
               alt={p.title}
               src={p.image}
-              className="w-full h-48 object-contain border-b border-gray-200 p-5"
+              className="w-full h-48 object-contain border-b border-gray-200 dark:border-slate-700 p-5"
               width={500}
               height={500}
             />
@@ -44,11 +44,13 @@ export default function Projects({ dict }: { dict: any }) {
               <div className="flex justify-between items-center mb-2">
                 <h3 className="text-xl font-semibold">{p.title}</h3>
 
-                <span className="text-gray-600 bg-purple-200 px-2 py-1 rounded-full text-xs">
+                <span className="text-gray-600 bg-purple-200 dark:text-purple-100 dark:bg-purple-700/60 px-2 py-1 rounded-full text-xs">
                   {p.tags.join(", ")}
                 </span>
               </div>
-              <p className="text-gray-600">{p.description}</p>
+              <p className="text-gray-600 dark:text-slate-300">
+                {p.description}
+              </p>
             </div>
           </a>
         ))}

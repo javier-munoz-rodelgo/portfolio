@@ -45,7 +45,7 @@ export default function About({
           priority
         />
 
-        <div className=" text-gray-600 text-lg leading-relaxed">
+        <div className=" text-gray-600 dark:text-slate-300 text-lg leading-relaxed">
           <h2 className="text-5xl font-caveat font-bold mb-6 hidden md:block">
             {dict.title}
           </h2>

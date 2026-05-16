@@ -118,7 +118,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${mainFont.variable} ${caveat.variable} font-sans bg-white text-gray-900 antialiased`}
+        className={`${mainFont.variable} ${caveat.variable} font-sans bg-white text-gray-900 antialiased dark:bg-slate-950 dark:text-slate-100`}
       >
         {children}
         <Toaster position="top-center" richColors />

@@ -23,8 +23,8 @@ export default function Header({
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all backdrop-blur bg-white/70 
-      ${scrolled ? "py-3 shadow-sm" : "py-5"}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all backdrop-blur bg-white/70 border-b border-transparent dark:bg-slate-950/75 dark:border-slate-800
+      ${scrolled ? "py-3 shadow-sm dark:shadow-lg dark:shadow-black/20" : "py-5"}`}
     >
       <nav className="max-w-6xl mx-auto flex justify-between items-center px-6">
         <span className="font-semibold text-xl">
@@ -59,7 +59,7 @@ export default function Header({
             </Link>
 
             {/* Separador vertical */}
-            <div className="h-4 w-px bg-gray-300"></div>
+            <div className="h-4 w-px bg-gray-300 dark:bg-slate-700"></div>
 
             <LanguageSelector />
           </div>

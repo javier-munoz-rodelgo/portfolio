@@ -42,7 +42,7 @@ export default function Experience({ dict }: { dict: ExperienceDictionary }) {
             />
             {enterprise.name}
             {enterprise.subtitle && (
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-gray-500 dark:text-slate-400">
                 {enterprise.subtitle}
               </span>
             )}
@@ -57,7 +57,7 @@ export default function Experience({ dict }: { dict: ExperienceDictionary }) {
                       experience.endDate === null ||
                       experience.endDate === "Invalid Date"
                         ? "bg-purple-600"
-                        : "bg-gray-400"
+                        : "bg-gray-400 dark:bg-slate-500"
                     }`}
                   ></div>
                 </div>
@@ -65,7 +65,7 @@ export default function Experience({ dict }: { dict: ExperienceDictionary }) {
 
               <div className="grow pt-0.5 pb-5">
                 <h4 className="text-1xl font-bold">{experience.title}</h4>
-                <p className="mt-2 text-sm text-gray-500">
+                <p className="mt-2 text-sm text-gray-500 dark:text-slate-400">
                   {new Date(experience.startDate).toLocaleDateString()} -{" "}
                   {experience.endDate === null ||
                   experience.endDate === "Invalid Date"

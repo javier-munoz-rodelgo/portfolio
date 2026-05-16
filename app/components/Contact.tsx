@@ -43,11 +43,16 @@ export default function ContactPage({ dict }: { dict: any }) {
     >
       <div className="max-w-2xl w-full space-y-8">
         <h2 className="text-4xl font-bold text-center">{dict.title}</h2>
-        <p className="text-center text-gray-600">{dict.description}</p>
+        <p className="text-center text-gray-600 dark:text-slate-300">
+          {dict.description}
+        </p>
 
         <Form action={formAction} className="space-y-6">
           <div>
-            <label className="block text-gray-700 mb-2" htmlFor="name">
+            <label
+              className="block text-gray-700 dark:text-slate-200 mb-2"
+              htmlFor="name"
+            >
               {dict.name || "Name"}
             </label>
             <input
@@ -55,11 +60,14 @@ export default function ContactPage({ dict }: { dict: any }) {
               name="name"
               required
               disabled={isPending}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
+              className="w-full border border-gray-300 bg-white text-gray-900 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
             />
           </div>
           <div>
-            <label className="block text-gray-700 mb-2" htmlFor="email">
+            <label
+              className="block text-gray-700 dark:text-slate-200 mb-2"
+              htmlFor="email"
+            >
               {dict.email || "Email"}
             </label>
             <input
@@ -68,11 +76,14 @@ export default function ContactPage({ dict }: { dict: any }) {
               type="email"
               required
               disabled={isPending}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
+              className="w-full border border-gray-300 bg-white text-gray-900 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
             />
           </div>
           <div>
-            <label className="block text-gray-700 mb-2" htmlFor="message">
+            <label
+              className="block text-gray-700 dark:text-slate-200 mb-2"
+              htmlFor="message"
+            >
               {dict.message || "Message"}
             </label>
             <textarea
@@ -81,7 +92,7 @@ export default function ContactPage({ dict }: { dict: any }) {
               rows={5}
               required
               disabled={isPending}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
+              className="w-full border border-gray-300 bg-white text-gray-900 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50"
             />
           </div>
           <button

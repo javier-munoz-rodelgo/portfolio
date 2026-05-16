@@ -3,8 +3,14 @@ import { Inter as MaintFont, Caveat } from "next/font/google";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";
 
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { getDictionary, Locale } from "../i18n/get-dictionary";
+import {
+  getAbsoluteUrl,
+  getLanguageAlternates,
+  SITE_NAME,
+  SITE_URL,
+} from "@/app/lib/seo";
 
 const mainFont = MaintFont({
   subsets: ["latin"],
@@ -18,21 +24,10 @@ const caveat = Caveat({
   display: "swap",
 });
 
-/**
- * Genera los parámetros estáticos para los idiomas.
- * Esto permite a Next.js generar estáticamente las rutas para ambos idiomas soportados.
- *
- * @returns Un array de objetos conteniendo el parámetro lang.
- */
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "es" }];
 }
 
-/**
- * Genera la metainformación dinámica para la página basada en el idioma.
- *
- * @param props.params - Los parámetros de la ruta que contienen el idioma.
- */
 export async function generateMetadata({
   params,
 }: {
@@ -40,73 +35,63 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const dict = await getDictionary(lang);
+  const canonicalUrl = getAbsoluteUrl(lang);
 
   return {
-    // Título de la página.
-    title: dict.meta.title,
-    // Descripción para SEO.
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: dict.meta.title,
+      template: `%s | ${SITE_NAME}`,
+    },
     description: dict.meta.description,
-    // Palabras clave para motores de búsqueda.
     keywords: dict.meta.keywords,
-    // URL base para resolver rutas relativas en metadatos.
-    metadataBase: new URL("https://javiermunoz.dev"),
-    // Autores del contenido.
-    authors: [{ name: "Javier Muñoz Rodelgo", url: "https://javiermunoz.dev" }],
-    // Creador del sitio.
+    applicationName: SITE_NAME,
+    category: "portfolio",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: getLanguageAlternates(),
+    },
+    authors: [{ name: "Javier Muñoz Rodelgo", url: SITE_URL }],
     creator: "Javier Muñoz Rodelgo",
-    // Configuración para compartir en redes sociales (Open Graph)
+    publisher: "Javier Muñoz Rodelgo",
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,
       type: "website",
-      locale: lang,
-      // URL canónica para este idioma
-      url: `https://javiermunoz.dev/${lang}`,
-      siteName: "Javier Muñoz Portfolio",
+      locale: lang === "es" ? "es_ES" : "en_US",
+      url: canonicalUrl,
+      siteName: SITE_NAME,
       images: [
         {
           url: "/avatar.png",
-          width: 200,
-          height: 200,
-          alt: "Javier Muñoz Portfolio",
+          width: 1200,
+          height: 630,
+          alt: "Javier Muñoz - Front-end Manager y UI Developer",
         },
       ],
     },
-    // Configuración específica para tarjetas de Twitter
     twitter: {
       card: "summary_large_image",
       title: dict.meta.title,
       description: dict.meta.description,
+      creator: "@javiermunoz",
+      images: ["/avatar.png"],
     },
-    // Enlaces alternativos para SEO internacional
-    alternates: {
-      // URL canónica de esta página
-      canonical: `https://javiermunoz.dev/${lang}`,
-      // URLs alternativas para otros idiomas
-      languages: {
-        en: `https://javiermunoz.dev/en`,
-        es: `https://javiermunoz.dev/es`,
-      },
-    },
-    // Instrucciones para robots de búsqueda
     robots: {
-      index: true, // Permitir indexación
-      follow: true, // Permitir seguir enlaces
+      index: true,
+      follow: true,
+      nocache: false,
       googleBot: {
         index: true,
         follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
       },
     },
   };
 }
 
-/**
- * Layout Raíz para la aplicación.
- * Establece el atributo lang del html basado en los parámetros.
- *
- * @param props.children - Los componentes hijos a renderizar.
- * @param props.params - Los parámetros de la ruta que contienen el idioma.
- */
 export default async function RootLayout({
   children,
   params,
@@ -115,6 +100,7 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+
   return (
     <html lang={lang}>
       <body

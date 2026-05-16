@@ -1,17 +1,55 @@
+import type { Metadata } from "next";
 import About from "@/app/components/About";
 import Experience from "@/app/components/Experience";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import ScrollToTop from "@/app/components/ScrollToTop";
-import { getDictionary } from "../../i18n/get-dictionary";
+import { getDictionary, type Locale } from "../../i18n/get-dictionary";
 import Link from "next/link";
+import { getAbsoluteUrl, getLanguageAlternates } from "@/app/lib/seo";
 
-/**
- * Componente de la página "Sobre mi".
- * Muestra el componente About (sin botón de navegación) y el componente Experience.
- *
- * @param props.params - Parámetros de ruta que contienen el código del idioma.
- */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
+  const title =
+    lang === "es"
+      ? "Sobre mi | Experiencia profesional"
+      : "About me | Professional experience";
+  const description =
+    lang === "es"
+      ? "Conoce la experiencia profesional, liderazgo frontend y trayectoria de Javier Muñoz en UI/UX, design systems y desarrollo web."
+      : "Discover Javier Muñoz's professional experience, frontend leadership, and background in UI/UX, design systems, and web development.";
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: getAbsoluteUrl(lang, "/about"),
+      languages: getLanguageAlternates("/about"),
+    },
+    openGraph: {
+      title,
+      description,
+      type: "profile",
+      url: getAbsoluteUrl(lang, "/about"),
+      images: [
+        { url: "/avatar.png", width: 1200, height: 630, alt: dict.meta.title },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/avatar.png"],
+    },
+  };
+}
+
 export default async function SobreMiPage({
   params,
 }: {
@@ -21,7 +59,7 @@ export default async function SobreMiPage({
   const dict = await getDictionary(lang);
 
   return (
-    <main>
+    <main aria-label={lang === "es" ? "Página sobre mí" : "About page"}>
       <Header dict={dict.navigation} lang={lang} />
       <About dict={dict.about} lang={lang} showButton={false} />
       <Experience dict={dict.experience} />

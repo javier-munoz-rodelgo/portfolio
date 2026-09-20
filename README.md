@@ -48,8 +48,6 @@ Sistema de optimización de imágenes integrado en Next.js para mejorar el rendi
 │    ├─ projects/
 │    │     ├─ page.tsx          → Listado de proyectos
 │    │     └─ [slug]/page.tsx   → Detalle de cada proyecto
-│    ├─ contact/
-│    │     └─ page.tsx          → Página de contacto
 │    └─ components/             → Componentes reutilizables (Hero, Navbar, Cards, etc.)
 ├─ public/
 │     └─ images/                → Imágenes estáticas optimizadas

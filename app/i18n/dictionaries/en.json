@@ -2,8 +2,7 @@
   "navigation": {
     "home": "Home",
     "about": "About",
-    "projects": "Projects",
-    "contact": "Contact"
+    "projects": "Projects"
   },
   "meta": {
     "title": "Javier | Portfolio",
@@ -14,8 +13,7 @@
     "greeting": "Hi, I'm",
     "role": "Front-end Manager & UI Developer",
     "description": "Passionate about building clean, fast, and accessible interfaces. I love combining design and code to create web experiences that truly stand out.",
-    "viewProjects": "View projects",
-    "contact": "Contact"
+    "viewProjects": "View projects"
   },
   "about": {
     "title": "About Me",
@@ -188,14 +186,6 @@
         "link": "https://vithas.es/"
       }
     ]
-  },
-  "contact": {
-    "title": "Contact",
-    "description": "If you'd like to collaborate or have a proposal, feel free to reach out.",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send message"
   },
   "footer": {
     "rights": "Portfolio"

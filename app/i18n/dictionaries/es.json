@@ -2,8 +2,7 @@
   "navigation": {
     "home": "Inicio",
     "about": "Sobre mí",
-    "projects": "Proyectos",
-    "contact": "Contacto"
+    "projects": "Proyectos"
   },
   "meta": {
     "title": "Javier | Portfolio",
@@ -14,8 +13,7 @@
     "greeting": "Hola, soy",
     "role": "Front-end Manager & UI Developer",
     "description": "Apasionado por construir interfaces limpias, rápidas y usables. Me gusta unir diseño y código para crear experiencias web que destaquen.",
-    "viewProjects": "Ver proyectos",
-    "contact": "Contacto"
+    "viewProjects": "Ver proyectos"
   },
   "about": {
     "title": "Sobre mí",
@@ -188,14 +186,6 @@
         "link": "https://vithas.es/"
       }
     ]
-  },
-  "contact": {
-    "title": "Contacto",
-    "description": "Si quieres colaborar o tienes alguna propuesta, no dudes en escribirme.",
-    "name": "Nombre",
-    "email": "Correo electrónico",
-    "message": "Mensaje",
-    "send": "Enviar mensaje"
   },
   "footer": {
     "rights": "Portfolio"

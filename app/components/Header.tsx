@@ -51,12 +51,6 @@ export default function Header({
             >
               {dict.projects}
             </Link>
-            <Link
-              href="#contact"
-              className="hover:text-purple-600 text-sm sm:text-base"
-            >
-              {dict.contact}
-            </Link>
 
             {/* Separador vertical */}
             <div className="h-4 w-px bg-gray-300 dark:bg-slate-700"></div>

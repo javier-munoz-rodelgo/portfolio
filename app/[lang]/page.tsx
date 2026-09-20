@@ -3,7 +3,6 @@ import Hero from "@/app/components/Hero";
 import About from "@/app/components/About";
 import Technologies from "@/app/components/Technologies";
 import Projects from "@/app/components/Projects";
-import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import ScrollToTop from "@/app/components/ScrollToTop";
 import { getDictionary } from "../i18n/get-dictionary";
@@ -62,7 +61,6 @@ export default async function HomePage({
         <About dict={dict.about} lang={lang} showButton={true} />
         <Technologies dict={dict.technologies} />
         <Projects dict={dict.projects} />
-        <Contact dict={dict.contact} />
         <Footer dict={dict.footer} />
         <ScrollToTop />
       </main>

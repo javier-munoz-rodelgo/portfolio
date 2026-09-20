@@ -63,13 +63,6 @@ export default function Hero({ dict }: { dict: any }) {
           >
             {dict.viewProjects || "View Projects"}
           </Link>
-
-          <Link
-            href="#contact"
-            className="border border-gray-300 text-gray-700 hover:bg-gray-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800 px-8 py-3 rounded-full font-medium transition-colors w-full md:w-auto"
-          >
-            {dict.contact || "Contact"}
-          </Link>
         </div>
       </div>
     </section>
